@@ -24,13 +24,16 @@ programaAux4: tipo
     | NADA
     ;
 
-v_vars: varsAux1 varsAux4 PUNTOYCOMA
+v_vars: varsAux1 v_varsDefinicion
     ;
 
 varsAux1: ID
     | tipo
     | l_list
     ;
+	
+v_varsDefinicion: varsAux4 PUNTOYCOMA
+	;
 
 varsAux2: IGUAL varsAux3
     |
@@ -45,6 +48,13 @@ varsAux4: ID varsAux2 varsAux5
 
 varsAux5: COMA ID varsAux2 varsAux5
     |
+    ;
+	
+v_varsAtrib: varsAtribAux1 v_varsDefinicion
+    ;
+
+varsAtribAux1: tipo
+    | l_list
     ;
 
 tipo: ENTERO
@@ -259,28 +269,6 @@ metodAux2: tipo
     ;
     
 metodAux3: metodAux1
-    |
-    ;
-	
-v_varsAtrib: varsAtribAux1 varsAtribAux4 PUNTOYCOMA
-    ;
-
-varsAtribAux1: tipo
-    | l_list
-    ;
-
-varsAtribAux2: IGUAL varsAtribAux3
-    |
-    ;
-
-varsAtribAux3: expresion
-    | cteL
-    ;
-
-varsAtribAux4: ID varsAtribAux2 varsAtribAux5
-    ;
-
-varsAtribAux5: COMA ID varsAtribAux2 varsAtribAux5
     |
     ;
 
