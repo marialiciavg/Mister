@@ -58,6 +58,15 @@ class misterListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by misterParser#v_varsDefinicion.
+    def enterV_varsDefinicion(self, ctx):
+        pass
+
+    # Exit a parse tree produced by misterParser#v_varsDefinicion.
+    def exitV_varsDefinicion(self, ctx):
+        pass
+
+
     # Enter a parse tree produced by misterParser#varsAux2.
     def enterVarsAux2(self, ctx):
         pass
@@ -91,6 +100,24 @@ class misterListener(ParseTreeListener):
 
     # Exit a parse tree produced by misterParser#varsAux5.
     def exitVarsAux5(self, ctx):
+        pass
+
+
+    # Enter a parse tree produced by misterParser#v_varsAtrib.
+    def enterV_varsAtrib(self, ctx):
+        pass
+
+    # Exit a parse tree produced by misterParser#v_varsAtrib.
+    def exitV_varsAtrib(self, ctx):
+        pass
+
+
+    # Enter a parse tree produced by misterParser#varsAtribAux1.
+    def enterVarsAtribAux1(self, ctx):
+        pass
+
+    # Exit a parse tree produced by misterParser#varsAtribAux1.
+    def exitVarsAtribAux1(self, ctx):
         pass
 
 
@@ -379,15 +406,6 @@ class misterListener(ParseTreeListener):
 
     # Exit a parse tree produced by misterParser#compuestoAux1.
     def exitCompuestoAux1(self, ctx):
-        pass
-
-
-    # Enter a parse tree produced by misterParser#compuestoAux2.
-    def enterCompuestoAux2(self, ctx):
-        pass
-
-    # Exit a parse tree produced by misterParser#compuestoAux2.
-    def exitCompuestoAux2(self, ctx):
         pass
 
 

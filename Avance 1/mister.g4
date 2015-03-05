@@ -187,11 +187,7 @@ factorAux1: SUMA
 compuesto: ID compuestoAux1
     ;
     
-compuestoAux1: llamarFunc compuestoAux2
-    |
-    ;
-    
-compuestoAux2: PUNTO ID llamarFunc compuestoAux2
+compuestoAux1: PUNTO ID llamarFunc
     |
     ;
 
@@ -276,9 +272,7 @@ metodAux3: metodAux1
 //Tokens
 //=============================================
 
-CTENTERO:                  '-'?DIGIT+ ;
-CTEDECIMAL:                '-'?DIGIT+'.'DIGIT+ ;
-CTETEXTO:               '"'[\u0000-\u00FF]*'"' ;
+
 INICIO:                  'INICIO' ;
 SI:                      'SI' ;
 SINO:                    'SINO' ;
@@ -323,6 +317,9 @@ PUNTOYCOMA:              ';' ;
 DOSPUNTOS:               ':' ;
 PUNTO:                   '.' ;
 ID:                      [a-zA-Z][a-zA-Z0-9]* ;
+CTENTERO:                  '-'?DIGIT+ ;
+CTEDECIMAL:                '-'?DIGIT+'.'DIGIT+ ;
+CTETEXTO:                  '"' ( WS | ~('"'|'\\') )* '"' ;
 WS                      : 
                         ( ' '
                         | '\t'
