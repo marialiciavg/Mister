@@ -75,8 +75,7 @@ parametrosAux1: parametrosAux2 ID parametrosAux3
     |
     ;
 
-parametrosAux2: ID
-    | tipo
+parametrosAux2: tipo
     | l_list
     ;
     
@@ -238,7 +237,7 @@ classAux3: metod
 atrib: ATRIBUTOS DOSPUNTOS atribAux1
     ;
     
-atribAux1: atribAux2 v_vars atribAux3
+atribAux1: atribAux2 v_varsAtrib atribAux3
     ;
     
 atribAux2: PUBLICO
@@ -260,6 +259,28 @@ metodAux2: tipo
     ;
     
 metodAux3: metodAux1
+    |
+    ;
+	
+v_varsAtrib: varsAtribAux1 varsAtribAux4 PUNTOYCOMA
+    ;
+
+varsAtribAux1: tipo
+    | l_list
+    ;
+
+varsAtribAux2: IGUAL varsAtribAux3
+    |
+    ;
+
+varsAtribAux3: expresion
+    | cteL
+    ;
+
+varsAtribAux4: ID varsAtribAux2 varsAtribAux5
+    ;
+
+varsAtribAux5: COMA ID varsAtribAux2 varsAtribAux5
     |
     ;
 
