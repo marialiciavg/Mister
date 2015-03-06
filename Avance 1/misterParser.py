@@ -10,8 +10,8 @@ else:
     from misterListener import misterListener
 def serializedATN():
     with StringIO() as buf:
-        buf.write("\3\u0430\ud6d1\u8206\uad2d\u4417\uaef1\u8d80\uaadd\3\62")
-        buf.write("\u01f1\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7")
+        buf.write("\3\u0430\ud6d1\u8206\uad2d\u4417\uaef1\u8d80\uaadd\3\63")
+        buf.write("\u01f9\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7")
         buf.write("\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t\13\4\f\t\f\4\r\t\r\4\16")
         buf.write("\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22\4\23\t\23")
         buf.write("\4\24\t\24\4\25\t\25\4\26\t\26\4\27\t\27\4\30\t\30\4\31")
@@ -21,208 +21,212 @@ def serializedATN():
         buf.write("/\t/\4\60\t\60\4\61\t\61\4\62\t\62\4\63\t\63\4\64\t\64")
         buf.write("\4\65\t\65\4\66\t\66\4\67\t\67\48\t8\49\t9\4:\t:\4;\t")
         buf.write(";\4<\t<\4=\t=\4>\t>\4?\t?\4@\t@\4A\tA\4B\tB\4C\tC\4D\t")
-        buf.write("D\3\2\3\2\3\2\3\2\3\2\3\2\3\2\3\2\3\3\3\3\3\3\3\3\3\3")
-        buf.write("\3\3\3\3\5\3\u0098\n\3\3\4\3\4\3\4\3\4\3\4\3\4\3\4\5\4")
-        buf.write("\u00a1\n\4\3\5\3\5\5\5\u00a5\n\5\3\6\3\6\3\6\3\7\3\7\3")
-        buf.write("\7\5\7\u00ad\n\7\3\b\3\b\3\b\3\t\3\t\3\t\5\t\u00b5\n\t")
-        buf.write("\3\n\3\n\5\n\u00b9\n\n\3\13\3\13\3\13\3\13\3\f\3\f\3\f")
-        buf.write("\3\f\3\f\3\f\5\f\u00c5\n\f\3\r\3\r\3\r\3\16\3\16\5\16")
-        buf.write("\u00cc\n\16\3\17\3\17\3\20\3\20\3\20\3\20\3\21\3\21\3")
-        buf.write("\21\3\21\3\21\3\22\3\22\3\22\3\22\3\22\5\22\u00de\n\22")
-        buf.write("\3\23\3\23\3\23\3\23\5\23\u00e4\n\23\3\24\3\24\3\24\3")
-        buf.write("\24\3\25\3\25\3\25\3\25\3\25\5\25\u00ef\n\25\3\26\3\26")
-        buf.write("\5\26\u00f3\n\26\3\27\3\27\3\27\3\27\3\27\3\27\5\27\u00fb")
-        buf.write("\n\27\3\30\3\30\3\30\3\30\3\30\3\30\3\30\3\31\3\31\3\31")
-        buf.write("\3\31\5\31\u0108\n\31\3\32\3\32\3\32\3\32\5\32\u010e\n")
-        buf.write("\32\3\33\3\33\3\33\3\33\3\33\5\33\u0115\n\33\3\34\3\34")
-        buf.write("\3\34\3\35\3\35\3\35\3\35\5\35\u011e\n\35\3\36\3\36\3")
-        buf.write("\37\3\37\3\37\3\37\3\37\3\37\3\37\3\37\5\37\u012a\n\37")
-        buf.write("\3 \3 \3 \3!\3!\3\"\3\"\3\"\3\"\5\"\u0135\n\"\3#\3#\3")
-        buf.write("#\3$\3$\3$\3$\3$\3$\3$\3$\3$\5$\u0143\n$\3%\3%\3%\3%\3")
-        buf.write("&\3&\3&\3&\3&\3&\3&\5&\u0150\n&\3\'\3\'\3\'\3\'\3\'\5")
-        buf.write("\'\u0157\n\'\3(\3(\3(\5(\u015c\n(\3)\3)\3)\3*\3*\3*\3")
-        buf.write("*\3*\3*\3*\3*\3*\5*\u016a\n*\3+\3+\3+\3+\3+\3+\3+\3+\5")
-        buf.write("+\u0174\n+\3,\3,\3-\3-\3-\3.\3.\3.\3.\5.\u017f\n.\3/\3")
-        buf.write("/\3/\3/\3/\3\60\3\60\5\60\u0188\n\60\3\61\3\61\3\61\3")
-        buf.write("\61\3\61\3\61\3\61\3\62\3\62\3\62\5\62\u0194\n\62\3\63")
-        buf.write("\3\63\3\63\3\63\3\63\3\64\3\64\3\64\3\64\5\64\u019f\n")
-        buf.write("\64\3\65\3\65\3\65\3\65\3\65\3\65\3\66\3\66\3\66\3\66")
-        buf.write("\3\66\3\66\3\66\3\67\3\67\3\67\3\67\3\67\5\67\u01b3\n")
-        buf.write("\67\38\38\38\38\38\38\39\39\39\39\39\39\39\39\39\3:\3")
-        buf.write(":\3:\5:\u01c7\n:\3;\3;\5;\u01cb\n;\3<\3<\5<\u01cf\n<\3")
-        buf.write("=\3=\3=\3=\3>\3>\3>\3>\3?\3?\3@\3@\5@\u01dd\n@\3A\3A\3")
-        buf.write("A\3A\3B\3B\3B\3B\3B\3B\3C\3C\5C\u01eb\nC\3D\3D\5D\u01ef")
-        buf.write("\nD\3D\2\2E\2\4\6\b\n\f\16\20\22\24\26\30\32\34\36 \"")
-        buf.write("$&(*,.\60\62\64\668:<>@BDFHJLNPRTVXZ\\^`bdfhjlnprtvxz")
-        buf.write("|~\u0080\u0082\u0084\u0086\2\7\3\2\n\f\4\2\26\26\30\30")
-        buf.write("\4\2\31\31 $\3\2\34\35\3\2\24\25\u01dd\2\u0088\3\2\2\2")
-        buf.write("\4\u0097\3\2\2\2\6\u00a0\3\2\2\2\b\u00a4\3\2\2\2\n\u00a6")
-        buf.write("\3\2\2\2\f\u00ac\3\2\2\2\16\u00ae\3\2\2\2\20\u00b4\3\2")
-        buf.write("\2\2\22\u00b8\3\2\2\2\24\u00ba\3\2\2\2\26\u00c4\3\2\2")
-        buf.write("\2\30\u00c6\3\2\2\2\32\u00cb\3\2\2\2\34\u00cd\3\2\2\2")
-        buf.write("\36\u00cf\3\2\2\2 \u00d3\3\2\2\2\"\u00dd\3\2\2\2$\u00e3")
-        buf.write("\3\2\2\2&\u00e5\3\2\2\2(\u00ee\3\2\2\2*\u00f2\3\2\2\2")
-        buf.write(",\u00fa\3\2\2\2.\u00fc\3\2\2\2\60\u0107\3\2\2\2\62\u010d")
-        buf.write("\3\2\2\2\64\u0114\3\2\2\2\66\u0116\3\2\2\28\u011d\3\2")
-        buf.write("\2\2:\u011f\3\2\2\2<\u0129\3\2\2\2>\u012b\3\2\2\2@\u012e")
-        buf.write("\3\2\2\2B\u0134\3\2\2\2D\u0136\3\2\2\2F\u0142\3\2\2\2")
-        buf.write("H\u0144\3\2\2\2J\u014f\3\2\2\2L\u0156\3\2\2\2N\u015b\3")
-        buf.write("\2\2\2P\u015d\3\2\2\2R\u0169\3\2\2\2T\u0173\3\2\2\2V\u0175")
-        buf.write("\3\2\2\2X\u0177\3\2\2\2Z\u017e\3\2\2\2\\\u0180\3\2\2\2")
-        buf.write("^\u0187\3\2\2\2`\u0189\3\2\2\2b\u0193\3\2\2\2d\u0195\3")
-        buf.write("\2\2\2f\u019e\3\2\2\2h\u01a0\3\2\2\2j\u01a6\3\2\2\2l\u01b2")
-        buf.write("\3\2\2\2n\u01b4\3\2\2\2p\u01ba\3\2\2\2r\u01c6\3\2\2\2")
-        buf.write("t\u01ca\3\2\2\2v\u01ce\3\2\2\2x\u01d0\3\2\2\2z\u01d4\3")
-        buf.write("\2\2\2|\u01d8\3\2\2\2~\u01dc\3\2\2\2\u0080\u01de\3\2\2")
-        buf.write("\2\u0082\u01e2\3\2\2\2\u0084\u01ea\3\2\2\2\u0086\u01ee")
-        buf.write("\3\2\2\2\u0088\u0089\5\4\3\2\u0089\u008a\5\6\4\2\u008a")
-        buf.write("\u008b\7\t\2\2\u008b\u008c\7\n\2\2\u008c\u008d\7\3\2\2")
-        buf.write("\u008d\u008e\5.\30\2\u008e\u008f\7\2\2\3\u008f\3\3\2\2")
-        buf.write("\2\u0090\u0091\5\n\6\2\u0091\u0092\5\4\3\2\u0092\u0098")
-        buf.write("\3\2\2\2\u0093\u0094\5p9\2\u0094\u0095\5\4\3\2\u0095\u0098")
-        buf.write("\3\2\2\2\u0096\u0098\3\2\2\2\u0097\u0090\3\2\2\2\u0097")
-        buf.write("\u0093\3\2\2\2\u0097\u0096\3\2\2\2\u0098\5\3\2\2\2\u0099")
-        buf.write("\u009a\7\t\2\2\u009a\u009b\5\b\5\2\u009b\u009c\7.\2\2")
-        buf.write("\u009c\u009d\5.\30\2\u009d\u009e\5\6\4\2\u009e\u00a1\3")
-        buf.write("\2\2\2\u009f\u00a1\3\2\2\2\u00a0\u0099\3\2\2\2\u00a0\u009f")
-        buf.write("\3\2\2\2\u00a1\7\3\2\2\2\u00a2\u00a5\5\34\17\2\u00a3\u00a5")
-        buf.write("\7\23\2\2\u00a4\u00a2\3\2\2\2\u00a4\u00a3\3\2\2\2\u00a5")
-        buf.write("\t\3\2\2\2\u00a6\u00a7\5\f\7\2\u00a7\u00a8\5\16\b\2\u00a8")
-        buf.write("\13\3\2\2\2\u00a9\u00ad\7.\2\2\u00aa\u00ad\5\34\17\2\u00ab")
-        buf.write("\u00ad\5\36\20\2\u00ac\u00a9\3\2\2\2\u00ac\u00aa\3\2\2")
-        buf.write("\2\u00ac\u00ab\3\2\2\2\u00ad\r\3\2\2\2\u00ae\u00af\5\24")
-        buf.write("\13\2\u00af\u00b0\7+\2\2\u00b0\17\3\2\2\2\u00b1\u00b2")
-        buf.write("\7\32\2\2\u00b2\u00b5\5\22\n\2\u00b3\u00b5\3\2\2\2\u00b4")
-        buf.write("\u00b1\3\2\2\2\u00b4\u00b3\3\2\2\2\u00b5\21\3\2\2\2\u00b6")
-        buf.write("\u00b9\5\66\34\2\u00b7\u00b9\5 \21\2\u00b8\u00b6\3\2\2")
-        buf.write("\2\u00b8\u00b7\3\2\2\2\u00b9\23\3\2\2\2\u00ba\u00bb\7")
-        buf.write(".\2\2\u00bb\u00bc\5\20\t\2\u00bc\u00bd\5\26\f\2\u00bd")
-        buf.write("\25\3\2\2\2\u00be\u00bf\7\33\2\2\u00bf\u00c0\7.\2\2\u00c0")
-        buf.write("\u00c1\5\20\t\2\u00c1\u00c2\5\26\f\2\u00c2\u00c5\3\2\2")
-        buf.write("\2\u00c3\u00c5\3\2\2\2\u00c4\u00be\3\2\2\2\u00c4\u00c3")
-        buf.write("\3\2\2\2\u00c5\27\3\2\2\2\u00c6\u00c7\5\32\16\2\u00c7")
-        buf.write("\u00c8\5\16\b\2\u00c8\31\3\2\2\2\u00c9\u00cc\5\34\17\2")
-        buf.write("\u00ca\u00cc\5\36\20\2\u00cb\u00c9\3\2\2\2\u00cb\u00ca")
-        buf.write("\3\2\2\2\u00cc\33\3\2\2\2\u00cd\u00ce\t\2\2\2\u00ce\35")
-        buf.write("\3\2\2\2\u00cf\u00d0\7\16\2\2\u00d0\u00d1\5\34\17\2\u00d1")
-        buf.write("\u00d2\7/\2\2\u00d2\37\3\2\2\2\u00d3\u00d4\7)\2\2\u00d4")
-        buf.write("\u00d5\5$\23\2\u00d5\u00d6\5\"\22\2\u00d6\u00d7\7*\2\2")
-        buf.write("\u00d7!\3\2\2\2\u00d8\u00d9\7\33\2\2\u00d9\u00da\5$\23")
-        buf.write("\2\u00da\u00db\5\"\22\2\u00db\u00de\3\2\2\2\u00dc\u00de")
-        buf.write("\3\2\2\2\u00dd\u00d8\3\2\2\2\u00dd\u00dc\3\2\2\2\u00de")
-        buf.write("#\3\2\2\2\u00df\u00e4\7/\2\2\u00e0\u00e4\7\60\2\2\u00e1")
-        buf.write("\u00e4\5X-\2\u00e2\u00e4\7\61\2\2\u00e3\u00df\3\2\2\2")
-        buf.write("\u00e3\u00e0\3\2\2\2\u00e3\u00e1\3\2\2\2\u00e3\u00e2\3")
-        buf.write("\2\2\2\u00e4%\3\2\2\2\u00e5\u00e6\7%\2\2\u00e6\u00e7\5")
-        buf.write("(\25\2\u00e7\u00e8\7&\2\2\u00e8\'\3\2\2\2\u00e9\u00ea")
-        buf.write("\5*\26\2\u00ea\u00eb\7.\2\2\u00eb\u00ec\5,\27\2\u00ec")
-        buf.write("\u00ef\3\2\2\2\u00ed\u00ef\3\2\2\2\u00ee\u00e9\3\2\2\2")
-        buf.write("\u00ee\u00ed\3\2\2\2\u00ef)\3\2\2\2\u00f0\u00f3\5\34\17")
-        buf.write("\2\u00f1\u00f3\5\36\20\2\u00f2\u00f0\3\2\2\2\u00f2\u00f1")
-        buf.write("\3\2\2\2\u00f3+\3\2\2\2\u00f4\u00f5\7\33\2\2\u00f5\u00f6")
-        buf.write("\5*\26\2\u00f6\u00f7\7.\2\2\u00f7\u00f8\5,\27\2\u00f8")
-        buf.write("\u00fb\3\2\2\2\u00f9\u00fb\3\2\2\2\u00fa\u00f4\3\2\2\2")
-        buf.write("\u00fa\u00f9\3\2\2\2\u00fb-\3\2\2\2\u00fc\u00fd\5&\24")
-        buf.write("\2\u00fd\u00fe\7\'\2\2\u00fe\u00ff\5\60\31\2\u00ff\u0100")
-        buf.write("\5\62\32\2\u0100\u0101\5\64\33\2\u0101\u0102\7(\2\2\u0102")
-        buf.write("/\3\2\2\2\u0103\u0104\5\n\6\2\u0104\u0105\5\60\31\2\u0105")
-        buf.write("\u0108\3\2\2\2\u0106\u0108\3\2\2\2\u0107\u0103\3\2\2\2")
-        buf.write("\u0107\u0106\3\2\2\2\u0108\61\3\2\2\2\u0109\u010a\5<\37")
-        buf.write("\2\u010a\u010b\5\62\32\2\u010b\u010e\3\2\2\2\u010c\u010e")
-        buf.write("\3\2\2\2\u010d\u0109\3\2\2\2\u010d\u010c\3\2\2\2\u010e")
-        buf.write("\63\3\2\2\2\u010f\u0110\7\r\2\2\u0110\u0111\5\66\34\2")
-        buf.write("\u0111\u0112\7+\2\2\u0112\u0115\3\2\2\2\u0113\u0115\3")
-        buf.write("\2\2\2\u0114\u010f\3\2\2\2\u0114\u0113\3\2\2\2\u0115\65")
-        buf.write("\3\2\2\2\u0116\u0117\5> \2\u0117\u0118\58\35\2\u0118\67")
-        buf.write("\3\2\2\2\u0119\u011a\5:\36\2\u011a\u011b\5\66\34\2\u011b")
-        buf.write("\u011e\3\2\2\2\u011c\u011e\3\2\2\2\u011d\u0119\3\2\2\2")
-        buf.write("\u011d\u011c\3\2\2\2\u011e9\3\2\2\2\u011f\u0120\t\3\2")
-        buf.write("\2\u0120;\3\2\2\2\u0121\u012a\5\\/\2\u0122\u012a\5`\61")
-        buf.write("\2\u0123\u0124\5\66\34\2\u0124\u0125\7+\2\2\u0125\u012a")
-        buf.write("\3\2\2\2\u0126\u012a\5j\66\2\u0127\u012a\5h\65\2\u0128")
-        buf.write("\u012a\5n8\2\u0129\u0121\3\2\2\2\u0129\u0122\3\2\2\2\u0129")
-        buf.write("\u0123\3\2\2\2\u0129\u0126\3\2\2\2\u0129\u0127\3\2\2\2")
-        buf.write("\u0129\u0128\3\2\2\2\u012a=\3\2\2\2\u012b\u012c\5D#\2")
-        buf.write("\u012c\u012d\5B\"\2\u012d?\3\2\2\2\u012e\u012f\t\4\2\2")
-        buf.write("\u012fA\3\2\2\2\u0130\u0131\5@!\2\u0131\u0132\5D#\2\u0132")
-        buf.write("\u0135\3\2\2\2\u0133\u0135\3\2\2\2\u0134\u0130\3\2\2\2")
-        buf.write("\u0134\u0133\3\2\2\2\u0135C\3\2\2\2\u0136\u0137\5P)\2")
-        buf.write("\u0137\u0138\5F$\2\u0138E\3\2\2\2\u0139\u013a\7\34\2\2")
-        buf.write("\u013a\u013b\5P)\2\u013b\u013c\5F$\2\u013c\u0143\3\2\2")
-        buf.write("\2\u013d\u013e\7\35\2\2\u013e\u013f\5P)\2\u013f\u0140")
-        buf.write("\5F$\2\u0140\u0143\3\2\2\2\u0141\u0143\3\2\2\2\u0142\u0139")
-        buf.write("\3\2\2\2\u0142\u013d\3\2\2\2\u0142\u0141\3\2\2\2\u0143")
-        buf.write("G\3\2\2\2\u0144\u0145\7%\2\2\u0145\u0146\5J&\2\u0146\u0147")
-        buf.write("\7&\2\2\u0147I\3\2\2\2\u0148\u0149\5\66\34\2\u0149\u014a")
-        buf.write("\5L\'\2\u014a\u0150\3\2\2\2\u014b\u014c\7\27\2\2\u014c")
-        buf.write("\u014d\7.\2\2\u014d\u0150\5L\'\2\u014e\u0150\3\2\2\2\u014f")
-        buf.write("\u0148\3\2\2\2\u014f\u014b\3\2\2\2\u014f\u014e\3\2\2\2")
-        buf.write("\u0150K\3\2\2\2\u0151\u0152\7\33\2\2\u0152\u0153\5N(\2")
-        buf.write("\u0153\u0154\5L\'\2\u0154\u0157\3\2\2\2\u0155\u0157\3")
-        buf.write("\2\2\2\u0156\u0151\3\2\2\2\u0156\u0155\3\2\2\2\u0157M")
-        buf.write("\3\2\2\2\u0158\u015c\5\66\34\2\u0159\u015a\7\27\2\2\u015a")
-        buf.write("\u015c\7.\2\2\u015b\u0158\3\2\2\2\u015b\u0159\3\2\2\2")
-        buf.write("\u015cO\3\2\2\2\u015d\u015e\5T+\2\u015e\u015f\5R*\2\u015f")
-        buf.write("Q\3\2\2\2\u0160\u0161\7\37\2\2\u0161\u0162\5T+\2\u0162")
-        buf.write("\u0163\5R*\2\u0163\u016a\3\2\2\2\u0164\u0165\7\36\2\2")
-        buf.write("\u0165\u0166\5T+\2\u0166\u0167\5R*\2\u0167\u016a\3\2\2")
-        buf.write("\2\u0168\u016a\3\2\2\2\u0169\u0160\3\2\2\2\u0169\u0164")
-        buf.write("\3\2\2\2\u0169\u0168\3\2\2\2\u016aS\3\2\2\2\u016b\u016c")
-        buf.write("\7%\2\2\u016c\u016d\5\66\34\2\u016d\u016e\7&\2\2\u016e")
-        buf.write("\u0174\3\2\2\2\u016f\u0174\5$\23\2\u0170\u0171\5V,\2\u0171")
-        buf.write("\u0172\5$\23\2\u0172\u0174\3\2\2\2\u0173\u016b\3\2\2\2")
-        buf.write("\u0173\u016f\3\2\2\2\u0173\u0170\3\2\2\2\u0174U\3\2\2")
-        buf.write("\2\u0175\u0176\t\5\2\2\u0176W\3\2\2\2\u0177\u0178\7.\2")
-        buf.write("\2\u0178\u0179\5Z.\2\u0179Y\3\2\2\2\u017a\u017b\7-\2\2")
-        buf.write("\u017b\u017c\7.\2\2\u017c\u017f\5H%\2\u017d\u017f\3\2")
-        buf.write("\2\2\u017e\u017a\3\2\2\2\u017e\u017d\3\2\2\2\u017f[\3")
-        buf.write("\2\2\2\u0180\u0181\7.\2\2\u0181\u0182\7\32\2\2\u0182\u0183")
-        buf.write("\5^\60\2\u0183\u0184\7+\2\2\u0184]\3\2\2\2\u0185\u0188")
-        buf.write("\5\66\34\2\u0186\u0188\5 \21\2\u0187\u0185\3\2\2\2\u0187")
-        buf.write("\u0186\3\2\2\2\u0188_\3\2\2\2\u0189\u018a\7\4\2\2\u018a")
-        buf.write("\u018b\7%\2\2\u018b\u018c\5\66\34\2\u018c\u018d\7&\2\2")
-        buf.write("\u018d\u018e\5d\63\2\u018e\u018f\5b\62\2\u018fa\3\2\2")
-        buf.write("\2\u0190\u0191\7\5\2\2\u0191\u0194\5d\63\2\u0192\u0194")
-        buf.write("\3\2\2\2\u0193\u0190\3\2\2\2\u0193\u0192\3\2\2\2\u0194")
-        buf.write("c\3\2\2\2\u0195\u0196\7\'\2\2\u0196\u0197\5<\37\2\u0197")
-        buf.write("\u0198\5f\64\2\u0198\u0199\7(\2\2\u0199e\3\2\2\2\u019a")
-        buf.write("\u019b\5<\37\2\u019b\u019c\5f\64\2\u019c\u019f\3\2\2\2")
-        buf.write("\u019d\u019f\3\2\2\2\u019e\u019a\3\2\2\2\u019e\u019d\3")
-        buf.write("\2\2\2\u019fg\3\2\2\2\u01a0\u01a1\7\6\2\2\u01a1\u01a2")
-        buf.write("\7%\2\2\u01a2\u01a3\5\66\34\2\u01a3\u01a4\7&\2\2\u01a4")
-        buf.write("\u01a5\5d\63\2\u01a5i\3\2\2\2\u01a6\u01a7\7\b\2\2\u01a7")
-        buf.write("\u01a8\7%\2\2\u01a8\u01a9\5\66\34\2\u01a9\u01aa\5l\67")
-        buf.write("\2\u01aa\u01ab\7&\2\2\u01ab\u01ac\7+\2\2\u01ack\3\2\2")
-        buf.write("\2\u01ad\u01ae\7\33\2\2\u01ae\u01af\5\66\34\2\u01af\u01b0")
-        buf.write("\5l\67\2\u01b0\u01b3\3\2\2\2\u01b1\u01b3\3\2\2\2\u01b2")
-        buf.write("\u01ad\3\2\2\2\u01b2\u01b1\3\2\2\2\u01b3m\3\2\2\2\u01b4")
-        buf.write("\u01b5\7\7\2\2\u01b5\u01b6\7%\2\2\u01b6\u01b7\7.\2\2\u01b7")
-        buf.write("\u01b8\7&\2\2\u01b8\u01b9\7+\2\2\u01b9o\3\2\2\2\u01ba")
-        buf.write("\u01bb\7\17\2\2\u01bb\u01bc\7.\2\2\u01bc\u01bd\5r:\2\u01bd")
-        buf.write("\u01be\7\'\2\2\u01be\u01bf\5t;\2\u01bf\u01c0\5v<\2\u01c0")
-        buf.write("\u01c1\7(\2\2\u01c1\u01c2\7+\2\2\u01c2q\3\2\2\2\u01c3")
-        buf.write("\u01c4\7\22\2\2\u01c4\u01c7\7.\2\2\u01c5\u01c7\3\2\2\2")
-        buf.write("\u01c6\u01c3\3\2\2\2\u01c6\u01c5\3\2\2\2\u01c7s\3\2\2")
-        buf.write("\2\u01c8\u01cb\5x=\2\u01c9\u01cb\3\2\2\2\u01ca\u01c8\3")
-        buf.write("\2\2\2\u01ca\u01c9\3\2\2\2\u01cbu\3\2\2\2\u01cc\u01cf")
-        buf.write("\5\u0080A\2\u01cd\u01cf\3\2\2\2\u01ce\u01cc\3\2\2\2\u01ce")
-        buf.write("\u01cd\3\2\2\2\u01cfw\3\2\2\2\u01d0\u01d1\7\20\2\2\u01d1")
-        buf.write("\u01d2\7,\2\2\u01d2\u01d3\5z>\2\u01d3y\3\2\2\2\u01d4\u01d5")
-        buf.write("\5|?\2\u01d5\u01d6\5\30\r\2\u01d6\u01d7\5~@\2\u01d7{\3")
-        buf.write("\2\2\2\u01d8\u01d9\t\6\2\2\u01d9}\3\2\2\2\u01da\u01dd")
-        buf.write("\5z>\2\u01db\u01dd\3\2\2\2\u01dc\u01da\3\2\2\2\u01dc\u01db")
-        buf.write("\3\2\2\2\u01dd\177\3\2\2\2\u01de\u01df\7\21\2\2\u01df")
-        buf.write("\u01e0\7,\2\2\u01e0\u01e1\5\u0082B\2\u01e1\u0081\3\2\2")
-        buf.write("\2\u01e2\u01e3\7\t\2\2\u01e3\u01e4\5\u0084C\2\u01e4\u01e5")
-        buf.write("\7.\2\2\u01e5\u01e6\5.\30\2\u01e6\u01e7\5\u0086D\2\u01e7")
-        buf.write("\u0083\3\2\2\2\u01e8\u01eb\5\34\17\2\u01e9\u01eb\7\23")
-        buf.write("\2\2\u01ea\u01e8\3\2\2\2\u01ea\u01e9\3\2\2\2\u01eb\u0085")
-        buf.write("\3\2\2\2\u01ec\u01ef\5\u0082B\2\u01ed\u01ef\3\2\2\2\u01ee")
-        buf.write("\u01ec\3\2\2\2\u01ee\u01ed\3\2\2\2\u01ef\u0087\3\2\2\2")
-        buf.write("&\u0097\u00a0\u00a4\u00ac\u00b4\u00b8\u00c4\u00cb\u00dd")
-        buf.write("\u00e3\u00ee\u00f2\u00fa\u0107\u010d\u0114\u011d\u0129")
-        buf.write("\u0134\u0142\u014f\u0156\u015b\u0169\u0173\u017e\u0187")
-        buf.write("\u0193\u019e\u01b2\u01c6\u01ca\u01ce\u01dc\u01ea\u01ee")
+        buf.write("D\4E\tE\3\2\3\2\3\2\3\2\3\2\3\2\3\2\3\2\3\3\3\3\3\3\3")
+        buf.write("\3\3\3\3\3\3\3\5\3\u009a\n\3\3\4\3\4\3\4\3\4\3\4\3\4\3")
+        buf.write("\4\5\4\u00a3\n\4\3\5\3\5\5\5\u00a7\n\5\3\6\3\6\3\6\3\7")
+        buf.write("\3\7\3\7\5\7\u00af\n\7\3\b\3\b\3\b\3\t\3\t\3\t\5\t\u00b7")
+        buf.write("\n\t\3\n\3\n\5\n\u00bb\n\n\3\13\3\13\3\13\3\13\3\f\3\f")
+        buf.write("\3\f\3\f\3\f\3\f\5\f\u00c7\n\f\3\r\3\r\3\r\3\16\3\16\5")
+        buf.write("\16\u00ce\n\16\3\17\3\17\3\20\3\20\3\20\3\20\3\21\3\21")
+        buf.write("\3\21\3\21\3\21\3\22\3\22\3\22\3\22\3\22\5\22\u00e0\n")
+        buf.write("\22\3\23\3\23\3\23\3\23\3\23\3\23\5\23\u00e8\n\23\3\24")
+        buf.write("\3\24\5\24\u00ec\n\24\3\25\3\25\3\25\3\25\3\26\3\26\3")
+        buf.write("\26\3\26\3\26\5\26\u00f7\n\26\3\27\3\27\5\27\u00fb\n\27")
+        buf.write("\3\30\3\30\3\30\3\30\3\30\3\30\5\30\u0103\n\30\3\31\3")
+        buf.write("\31\3\31\3\31\3\31\3\31\3\31\3\32\3\32\3\32\3\32\5\32")
+        buf.write("\u0110\n\32\3\33\3\33\3\33\3\33\5\33\u0116\n\33\3\34\3")
+        buf.write("\34\3\34\3\34\3\34\5\34\u011d\n\34\3\35\3\35\3\35\3\36")
+        buf.write("\3\36\3\36\3\36\5\36\u0126\n\36\3\37\3\37\3 \3 \3 \3 ")
+        buf.write("\3 \3 \3 \3 \5 \u0132\n \3!\3!\3!\3\"\3\"\3#\3#\3#\3#")
+        buf.write("\5#\u013d\n#\3$\3$\3$\3%\3%\3%\3%\3%\3%\3%\3%\3%\5%\u014b")
+        buf.write("\n%\3&\3&\3&\3&\3\'\3\'\3\'\3\'\3\'\3\'\3\'\5\'\u0158")
+        buf.write("\n\'\3(\3(\3(\3(\3(\5(\u015f\n(\3)\3)\3)\5)\u0164\n)\3")
+        buf.write("*\3*\3*\3+\3+\3+\3+\3+\3+\3+\3+\3+\5+\u0172\n+\3,\3,\3")
+        buf.write(",\3,\3,\3,\3,\3,\5,\u017c\n,\3-\3-\3.\3.\3.\3/\3/\3/\5")
+        buf.write("/\u0186\n/\3\60\3\60\3\60\3\60\3\60\3\60\3\61\3\61\5\61")
+        buf.write("\u0190\n\61\3\62\3\62\3\62\3\62\3\62\3\62\3\62\3\63\3")
+        buf.write("\63\3\63\5\63\u019c\n\63\3\64\3\64\3\64\3\64\3\64\3\65")
+        buf.write("\3\65\3\65\3\65\5\65\u01a7\n\65\3\66\3\66\3\66\3\66\3")
+        buf.write("\66\3\66\3\67\3\67\3\67\3\67\3\67\3\67\3\67\38\38\38\3")
+        buf.write("8\38\58\u01bb\n8\39\39\39\39\39\39\3:\3:\3:\3:\3:\3:\3")
+        buf.write(":\3:\3:\3;\3;\3;\5;\u01cf\n;\3<\3<\5<\u01d3\n<\3=\3=\5")
+        buf.write("=\u01d7\n=\3>\3>\3>\3>\3?\3?\3?\3?\3@\3@\3A\3A\5A\u01e5")
+        buf.write("\nA\3B\3B\3B\3B\3C\3C\3C\3C\3C\3C\3D\3D\5D\u01f3\nD\3")
+        buf.write("E\3E\5E\u01f7\nE\3E\2\2F\2\4\6\b\n\f\16\20\22\24\26\30")
+        buf.write("\32\34\36 \"$&(*,.\60\62\64\668:<>@BDFHJLNPRTVXZ\\^`b")
+        buf.write("dfhjlnprtvxz|~\u0080\u0082\u0084\u0086\u0088\2\7\3\2\n")
+        buf.write("\f\4\2\27\27\31\31\4\2\32\32!%\3\2\35\36\3\2\24\25\u01e5")
+        buf.write("\2\u008a\3\2\2\2\4\u0099\3\2\2\2\6\u00a2\3\2\2\2\b\u00a6")
+        buf.write("\3\2\2\2\n\u00a8\3\2\2\2\f\u00ae\3\2\2\2\16\u00b0\3\2")
+        buf.write("\2\2\20\u00b6\3\2\2\2\22\u00ba\3\2\2\2\24\u00bc\3\2\2")
+        buf.write("\2\26\u00c6\3\2\2\2\30\u00c8\3\2\2\2\32\u00cd\3\2\2\2")
+        buf.write("\34\u00cf\3\2\2\2\36\u00d1\3\2\2\2 \u00d5\3\2\2\2\"\u00df")
+        buf.write("\3\2\2\2$\u00e7\3\2\2\2&\u00eb\3\2\2\2(\u00ed\3\2\2\2")
+        buf.write("*\u00f6\3\2\2\2,\u00fa\3\2\2\2.\u0102\3\2\2\2\60\u0104")
+        buf.write("\3\2\2\2\62\u010f\3\2\2\2\64\u0115\3\2\2\2\66\u011c\3")
+        buf.write("\2\2\28\u011e\3\2\2\2:\u0125\3\2\2\2<\u0127\3\2\2\2>\u0131")
+        buf.write("\3\2\2\2@\u0133\3\2\2\2B\u0136\3\2\2\2D\u013c\3\2\2\2")
+        buf.write("F\u013e\3\2\2\2H\u014a\3\2\2\2J\u014c\3\2\2\2L\u0157\3")
+        buf.write("\2\2\2N\u015e\3\2\2\2P\u0163\3\2\2\2R\u0165\3\2\2\2T\u0171")
+        buf.write("\3\2\2\2V\u017b\3\2\2\2X\u017d\3\2\2\2Z\u017f\3\2\2\2")
+        buf.write("\\\u0185\3\2\2\2^\u0187\3\2\2\2`\u018f\3\2\2\2b\u0191")
+        buf.write("\3\2\2\2d\u019b\3\2\2\2f\u019d\3\2\2\2h\u01a6\3\2\2\2")
+        buf.write("j\u01a8\3\2\2\2l\u01ae\3\2\2\2n\u01ba\3\2\2\2p\u01bc\3")
+        buf.write("\2\2\2r\u01c2\3\2\2\2t\u01ce\3\2\2\2v\u01d2\3\2\2\2x\u01d6")
+        buf.write("\3\2\2\2z\u01d8\3\2\2\2|\u01dc\3\2\2\2~\u01e0\3\2\2\2")
+        buf.write("\u0080\u01e4\3\2\2\2\u0082\u01e6\3\2\2\2\u0084\u01ea\3")
+        buf.write("\2\2\2\u0086\u01f2\3\2\2\2\u0088\u01f6\3\2\2\2\u008a\u008b")
+        buf.write("\5\4\3\2\u008b\u008c\5\6\4\2\u008c\u008d\7\t\2\2\u008d")
+        buf.write("\u008e\7\n\2\2\u008e\u008f\7\3\2\2\u008f\u0090\5\60\31")
+        buf.write("\2\u0090\u0091\7\2\2\3\u0091\3\3\2\2\2\u0092\u0093\5\n")
+        buf.write("\6\2\u0093\u0094\5\4\3\2\u0094\u009a\3\2\2\2\u0095\u0096")
+        buf.write("\5r:\2\u0096\u0097\5\4\3\2\u0097\u009a\3\2\2\2\u0098\u009a")
+        buf.write("\3\2\2\2\u0099\u0092\3\2\2\2\u0099\u0095\3\2\2\2\u0099")
+        buf.write("\u0098\3\2\2\2\u009a\5\3\2\2\2\u009b\u009c\7\t\2\2\u009c")
+        buf.write("\u009d\5\b\5\2\u009d\u009e\7/\2\2\u009e\u009f\5\60\31")
+        buf.write("\2\u009f\u00a0\5\6\4\2\u00a0\u00a3\3\2\2\2\u00a1\u00a3")
+        buf.write("\3\2\2\2\u00a2\u009b\3\2\2\2\u00a2\u00a1\3\2\2\2\u00a3")
+        buf.write("\7\3\2\2\2\u00a4\u00a7\5\34\17\2\u00a5\u00a7\7\23\2\2")
+        buf.write("\u00a6\u00a4\3\2\2\2\u00a6\u00a5\3\2\2\2\u00a7\t\3\2\2")
+        buf.write("\2\u00a8\u00a9\5\f\7\2\u00a9\u00aa\5\16\b\2\u00aa\13\3")
+        buf.write("\2\2\2\u00ab\u00af\7/\2\2\u00ac\u00af\5\34\17\2\u00ad")
+        buf.write("\u00af\5\36\20\2\u00ae\u00ab\3\2\2\2\u00ae\u00ac\3\2\2")
+        buf.write("\2\u00ae\u00ad\3\2\2\2\u00af\r\3\2\2\2\u00b0\u00b1\5\24")
+        buf.write("\13\2\u00b1\u00b2\7,\2\2\u00b2\17\3\2\2\2\u00b3\u00b4")
+        buf.write("\7\33\2\2\u00b4\u00b7\5\22\n\2\u00b5\u00b7\3\2\2\2\u00b6")
+        buf.write("\u00b3\3\2\2\2\u00b6\u00b5\3\2\2\2\u00b7\21\3\2\2\2\u00b8")
+        buf.write("\u00bb\58\35\2\u00b9\u00bb\5 \21\2\u00ba\u00b8\3\2\2\2")
+        buf.write("\u00ba\u00b9\3\2\2\2\u00bb\23\3\2\2\2\u00bc\u00bd\7/\2")
+        buf.write("\2\u00bd\u00be\5\20\t\2\u00be\u00bf\5\26\f\2\u00bf\25")
+        buf.write("\3\2\2\2\u00c0\u00c1\7\34\2\2\u00c1\u00c2\7/\2\2\u00c2")
+        buf.write("\u00c3\5\20\t\2\u00c3\u00c4\5\26\f\2\u00c4\u00c7\3\2\2")
+        buf.write("\2\u00c5\u00c7\3\2\2\2\u00c6\u00c0\3\2\2\2\u00c6\u00c5")
+        buf.write("\3\2\2\2\u00c7\27\3\2\2\2\u00c8\u00c9\5\32\16\2\u00c9")
+        buf.write("\u00ca\5\16\b\2\u00ca\31\3\2\2\2\u00cb\u00ce\5\34\17\2")
+        buf.write("\u00cc\u00ce\5\36\20\2\u00cd\u00cb\3\2\2\2\u00cd\u00cc")
+        buf.write("\3\2\2\2\u00ce\33\3\2\2\2\u00cf\u00d0\t\2\2\2\u00d0\35")
+        buf.write("\3\2\2\2\u00d1\u00d2\7\16\2\2\u00d2\u00d3\5\34\17\2\u00d3")
+        buf.write("\u00d4\7\60\2\2\u00d4\37\3\2\2\2\u00d5\u00d6\7*\2\2\u00d6")
+        buf.write("\u00d7\5$\23\2\u00d7\u00d8\5\"\22\2\u00d8\u00d9\7+\2\2")
+        buf.write("\u00d9!\3\2\2\2\u00da\u00db\7\34\2\2\u00db\u00dc\5$\23")
+        buf.write("\2\u00dc\u00dd\5\"\22\2\u00dd\u00e0\3\2\2\2\u00de\u00e0")
+        buf.write("\3\2\2\2\u00df\u00da\3\2\2\2\u00df\u00de\3\2\2\2\u00e0")
+        buf.write("#\3\2\2\2\u00e1\u00e8\7\60\2\2\u00e2\u00e8\7\61\2\2\u00e3")
+        buf.write("\u00e4\5Z.\2\u00e4\u00e5\5&\24\2\u00e5\u00e8\3\2\2\2\u00e6")
+        buf.write("\u00e8\7\62\2\2\u00e7\u00e1\3\2\2\2\u00e7\u00e2\3\2\2")
+        buf.write("\2\u00e7\u00e3\3\2\2\2\u00e7\u00e6\3\2\2\2\u00e8%\3\2")
+        buf.write("\2\2\u00e9\u00ec\5J&\2\u00ea\u00ec\3\2\2\2\u00eb\u00e9")
+        buf.write("\3\2\2\2\u00eb\u00ea\3\2\2\2\u00ec\'\3\2\2\2\u00ed\u00ee")
+        buf.write("\7&\2\2\u00ee\u00ef\5*\26\2\u00ef\u00f0\7\'\2\2\u00f0")
+        buf.write(")\3\2\2\2\u00f1\u00f2\5,\27\2\u00f2\u00f3\7/\2\2\u00f3")
+        buf.write("\u00f4\5.\30\2\u00f4\u00f7\3\2\2\2\u00f5\u00f7\3\2\2\2")
+        buf.write("\u00f6\u00f1\3\2\2\2\u00f6\u00f5\3\2\2\2\u00f7+\3\2\2")
+        buf.write("\2\u00f8\u00fb\5\34\17\2\u00f9\u00fb\5\36\20\2\u00fa\u00f8")
+        buf.write("\3\2\2\2\u00fa\u00f9\3\2\2\2\u00fb-\3\2\2\2\u00fc\u00fd")
+        buf.write("\7\34\2\2\u00fd\u00fe\5,\27\2\u00fe\u00ff\7/\2\2\u00ff")
+        buf.write("\u0100\5.\30\2\u0100\u0103\3\2\2\2\u0101\u0103\3\2\2\2")
+        buf.write("\u0102\u00fc\3\2\2\2\u0102\u0101\3\2\2\2\u0103/\3\2\2")
+        buf.write("\2\u0104\u0105\5(\25\2\u0105\u0106\7(\2\2\u0106\u0107")
+        buf.write("\5\62\32\2\u0107\u0108\5\64\33\2\u0108\u0109\5\66\34\2")
+        buf.write("\u0109\u010a\7)\2\2\u010a\61\3\2\2\2\u010b\u010c\5\n\6")
+        buf.write("\2\u010c\u010d\5\62\32\2\u010d\u0110\3\2\2\2\u010e\u0110")
+        buf.write("\3\2\2\2\u010f\u010b\3\2\2\2\u010f\u010e\3\2\2\2\u0110")
+        buf.write("\63\3\2\2\2\u0111\u0112\5> \2\u0112\u0113\5\64\33\2\u0113")
+        buf.write("\u0116\3\2\2\2\u0114\u0116\3\2\2\2\u0115\u0111\3\2\2\2")
+        buf.write("\u0115\u0114\3\2\2\2\u0116\65\3\2\2\2\u0117\u0118\7\r")
+        buf.write("\2\2\u0118\u0119\58\35\2\u0119\u011a\7,\2\2\u011a\u011d")
+        buf.write("\3\2\2\2\u011b\u011d\3\2\2\2\u011c\u0117\3\2\2\2\u011c")
+        buf.write("\u011b\3\2\2\2\u011d\67\3\2\2\2\u011e\u011f\5@!\2\u011f")
+        buf.write("\u0120\5:\36\2\u01209\3\2\2\2\u0121\u0122\5<\37\2\u0122")
+        buf.write("\u0123\58\35\2\u0123\u0126\3\2\2\2\u0124\u0126\3\2\2\2")
+        buf.write("\u0125\u0121\3\2\2\2\u0125\u0124\3\2\2\2\u0126;\3\2\2")
+        buf.write("\2\u0127\u0128\t\3\2\2\u0128=\3\2\2\2\u0129\u0132\5^\60")
+        buf.write("\2\u012a\u0132\5b\62\2\u012b\u012c\58\35\2\u012c\u012d")
+        buf.write("\7,\2\2\u012d\u0132\3\2\2\2\u012e\u0132\5l\67\2\u012f")
+        buf.write("\u0132\5j\66\2\u0130\u0132\5p9\2\u0131\u0129\3\2\2\2\u0131")
+        buf.write("\u012a\3\2\2\2\u0131\u012b\3\2\2\2\u0131\u012e\3\2\2\2")
+        buf.write("\u0131\u012f\3\2\2\2\u0131\u0130\3\2\2\2\u0132?\3\2\2")
+        buf.write("\2\u0133\u0134\5F$\2\u0134\u0135\5D#\2\u0135A\3\2\2\2")
+        buf.write("\u0136\u0137\t\4\2\2\u0137C\3\2\2\2\u0138\u0139\5B\"\2")
+        buf.write("\u0139\u013a\5F$\2\u013a\u013d\3\2\2\2\u013b\u013d\3\2")
+        buf.write("\2\2\u013c\u0138\3\2\2\2\u013c\u013b\3\2\2\2\u013dE\3")
+        buf.write("\2\2\2\u013e\u013f\5R*\2\u013f\u0140\5H%\2\u0140G\3\2")
+        buf.write("\2\2\u0141\u0142\7\35\2\2\u0142\u0143\5R*\2\u0143\u0144")
+        buf.write("\5H%\2\u0144\u014b\3\2\2\2\u0145\u0146\7\36\2\2\u0146")
+        buf.write("\u0147\5R*\2\u0147\u0148\5H%\2\u0148\u014b\3\2\2\2\u0149")
+        buf.write("\u014b\3\2\2\2\u014a\u0141\3\2\2\2\u014a\u0145\3\2\2\2")
+        buf.write("\u014a\u0149\3\2\2\2\u014bI\3\2\2\2\u014c\u014d\7&\2\2")
+        buf.write("\u014d\u014e\5L\'\2\u014e\u014f\7\'\2\2\u014fK\3\2\2\2")
+        buf.write("\u0150\u0151\58\35\2\u0151\u0152\5N(\2\u0152\u0158\3\2")
+        buf.write("\2\2\u0153\u0154\7\30\2\2\u0154\u0155\7/\2\2\u0155\u0158")
+        buf.write("\5N(\2\u0156\u0158\3\2\2\2\u0157\u0150\3\2\2\2\u0157\u0153")
+        buf.write("\3\2\2\2\u0157\u0156\3\2\2\2\u0158M\3\2\2\2\u0159\u015a")
+        buf.write("\7\34\2\2\u015a\u015b\5P)\2\u015b\u015c\5N(\2\u015c\u015f")
+        buf.write("\3\2\2\2\u015d\u015f\3\2\2\2\u015e\u0159\3\2\2\2\u015e")
+        buf.write("\u015d\3\2\2\2\u015fO\3\2\2\2\u0160\u0164\58\35\2\u0161")
+        buf.write("\u0162\7\30\2\2\u0162\u0164\7/\2\2\u0163\u0160\3\2\2\2")
+        buf.write("\u0163\u0161\3\2\2\2\u0164Q\3\2\2\2\u0165\u0166\5V,\2")
+        buf.write("\u0166\u0167\5T+\2\u0167S\3\2\2\2\u0168\u0169\7 \2\2\u0169")
+        buf.write("\u016a\5V,\2\u016a\u016b\5T+\2\u016b\u0172\3\2\2\2\u016c")
+        buf.write("\u016d\7\37\2\2\u016d\u016e\5V,\2\u016e\u016f\5T+\2\u016f")
+        buf.write("\u0172\3\2\2\2\u0170\u0172\3\2\2\2\u0171\u0168\3\2\2\2")
+        buf.write("\u0171\u016c\3\2\2\2\u0171\u0170\3\2\2\2\u0172U\3\2\2")
+        buf.write("\2\u0173\u0174\7&\2\2\u0174\u0175\58\35\2\u0175\u0176")
+        buf.write("\7\'\2\2\u0176\u017c\3\2\2\2\u0177\u017c\5$\23\2\u0178")
+        buf.write("\u0179\5X-\2\u0179\u017a\5$\23\2\u017a\u017c\3\2\2\2\u017b")
+        buf.write("\u0173\3\2\2\2\u017b\u0177\3\2\2\2\u017b\u0178\3\2\2\2")
+        buf.write("\u017cW\3\2\2\2\u017d\u017e\t\5\2\2\u017eY\3\2\2\2\u017f")
+        buf.write("\u0180\7/\2\2\u0180\u0181\5\\/\2\u0181[\3\2\2\2\u0182")
+        buf.write("\u0183\7.\2\2\u0183\u0186\7/\2\2\u0184\u0186\3\2\2\2\u0185")
+        buf.write("\u0182\3\2\2\2\u0185\u0184\3\2\2\2\u0186]\3\2\2\2\u0187")
+        buf.write("\u0188\7\26\2\2\u0188\u0189\5Z.\2\u0189\u018a\7\33\2\2")
+        buf.write("\u018a\u018b\5`\61\2\u018b\u018c\7,\2\2\u018c_\3\2\2\2")
+        buf.write("\u018d\u0190\58\35\2\u018e\u0190\5 \21\2\u018f\u018d\3")
+        buf.write("\2\2\2\u018f\u018e\3\2\2\2\u0190a\3\2\2\2\u0191\u0192")
+        buf.write("\7\4\2\2\u0192\u0193\7&\2\2\u0193\u0194\58\35\2\u0194")
+        buf.write("\u0195\7\'\2\2\u0195\u0196\5f\64\2\u0196\u0197\5d\63\2")
+        buf.write("\u0197c\3\2\2\2\u0198\u0199\7\5\2\2\u0199\u019c\5f\64")
+        buf.write("\2\u019a\u019c\3\2\2\2\u019b\u0198\3\2\2\2\u019b\u019a")
+        buf.write("\3\2\2\2\u019ce\3\2\2\2\u019d\u019e\7(\2\2\u019e\u019f")
+        buf.write("\5> \2\u019f\u01a0\5h\65\2\u01a0\u01a1\7)\2\2\u01a1g\3")
+        buf.write("\2\2\2\u01a2\u01a3\5> \2\u01a3\u01a4\5h\65\2\u01a4\u01a7")
+        buf.write("\3\2\2\2\u01a5\u01a7\3\2\2\2\u01a6\u01a2\3\2\2\2\u01a6")
+        buf.write("\u01a5\3\2\2\2\u01a7i\3\2\2\2\u01a8\u01a9\7\6\2\2\u01a9")
+        buf.write("\u01aa\7&\2\2\u01aa\u01ab\58\35\2\u01ab\u01ac\7\'\2\2")
+        buf.write("\u01ac\u01ad\5f\64\2\u01adk\3\2\2\2\u01ae\u01af\7\b\2")
+        buf.write("\2\u01af\u01b0\7&\2\2\u01b0\u01b1\58\35\2\u01b1\u01b2")
+        buf.write("\5n8\2\u01b2\u01b3\7\'\2\2\u01b3\u01b4\7,\2\2\u01b4m\3")
+        buf.write("\2\2\2\u01b5\u01b6\7\34\2\2\u01b6\u01b7\58\35\2\u01b7")
+        buf.write("\u01b8\5n8\2\u01b8\u01bb\3\2\2\2\u01b9\u01bb\3\2\2\2\u01ba")
+        buf.write("\u01b5\3\2\2\2\u01ba\u01b9\3\2\2\2\u01bbo\3\2\2\2\u01bc")
+        buf.write("\u01bd\7\7\2\2\u01bd\u01be\7&\2\2\u01be\u01bf\7/\2\2\u01bf")
+        buf.write("\u01c0\7\'\2\2\u01c0\u01c1\7,\2\2\u01c1q\3\2\2\2\u01c2")
+        buf.write("\u01c3\7\17\2\2\u01c3\u01c4\7/\2\2\u01c4\u01c5\5t;\2\u01c5")
+        buf.write("\u01c6\7(\2\2\u01c6\u01c7\5v<\2\u01c7\u01c8\5x=\2\u01c8")
+        buf.write("\u01c9\7)\2\2\u01c9\u01ca\7,\2\2\u01cas\3\2\2\2\u01cb")
+        buf.write("\u01cc\7\22\2\2\u01cc\u01cf\7/\2\2\u01cd\u01cf\3\2\2\2")
+        buf.write("\u01ce\u01cb\3\2\2\2\u01ce\u01cd\3\2\2\2\u01cfu\3\2\2")
+        buf.write("\2\u01d0\u01d3\5z>\2\u01d1\u01d3\3\2\2\2\u01d2\u01d0\3")
+        buf.write("\2\2\2\u01d2\u01d1\3\2\2\2\u01d3w\3\2\2\2\u01d4\u01d7")
+        buf.write("\5\u0082B\2\u01d5\u01d7\3\2\2\2\u01d6\u01d4\3\2\2\2\u01d6")
+        buf.write("\u01d5\3\2\2\2\u01d7y\3\2\2\2\u01d8\u01d9\7\20\2\2\u01d9")
+        buf.write("\u01da\7-\2\2\u01da\u01db\5|?\2\u01db{\3\2\2\2\u01dc\u01dd")
+        buf.write("\5~@\2\u01dd\u01de\5\30\r\2\u01de\u01df\5\u0080A\2\u01df")
+        buf.write("}\3\2\2\2\u01e0\u01e1\t\6\2\2\u01e1\177\3\2\2\2\u01e2")
+        buf.write("\u01e5\5|?\2\u01e3\u01e5\3\2\2\2\u01e4\u01e2\3\2\2\2\u01e4")
+        buf.write("\u01e3\3\2\2\2\u01e5\u0081\3\2\2\2\u01e6\u01e7\7\21\2")
+        buf.write("\2\u01e7\u01e8\7-\2\2\u01e8\u01e9\5\u0084C\2\u01e9\u0083")
+        buf.write("\3\2\2\2\u01ea\u01eb\7\t\2\2\u01eb\u01ec\5\u0086D\2\u01ec")
+        buf.write("\u01ed\7/\2\2\u01ed\u01ee\5\60\31\2\u01ee\u01ef\5\u0088")
+        buf.write("E\2\u01ef\u0085\3\2\2\2\u01f0\u01f3\5\34\17\2\u01f1\u01f3")
+        buf.write("\7\23\2\2\u01f2\u01f0\3\2\2\2\u01f2\u01f1\3\2\2\2\u01f3")
+        buf.write("\u0087\3\2\2\2\u01f4\u01f7\5\u0084C\2\u01f5\u01f7\3\2")
+        buf.write("\2\2\u01f6\u01f4\3\2\2\2\u01f6\u01f5\3\2\2\2\u01f7\u0089")
+        buf.write("\3\2\2\2\'\u0099\u00a2\u00a6\u00ae\u00b6\u00ba\u00c6\u00cd")
+        buf.write("\u00df\u00e7\u00eb\u00f6\u00fa\u0102\u010f\u0115\u011c")
+        buf.write("\u0125\u0131\u013c\u014a\u0157\u015e\u0163\u0171\u017b")
+        buf.write("\u0185\u018f\u019b\u01a6\u01ba\u01ce\u01d2\u01d6\u01e4")
+        buf.write("\u01f2\u01f6")
         return buf.getvalue()
 
 
@@ -240,23 +244,23 @@ class misterParser ( Parser ):
                      u"'LEER'", u"'IMPRIMIR'", u"'FUNCION'", u"'ENTERO'", 
                      u"'DECIMAL'", u"'TEXTO'", u"'RETORNAR'", u"'LISTA'", 
                      u"'CLASE'", u"'ATRIBUTOS'", u"'METODOS'", u"'HEREDA'", 
-                     u"'NADA'", u"'PRIVADO'", u"'PUBLICO'", u"'&&'", u"'&'", 
-                     u"'||'", u"'=='", u"'='", u"','", u"'+'", u"'-'", u"'/'", 
-                     u"'*'", u"'!='", u"'>='", u"'<='", u"'<'", u"'>'", 
-                     u"'('", u"')'", u"'{'", u"'}'", u"'['", u"']'", u"';'", 
-                     u"':'", u"'.'" ]
+                     u"'NADA'", u"'PRIVADO'", u"'PUBLICO'", u"'ASIGNAR'", 
+                     u"'&&'", u"'&'", u"'||'", u"'=='", u"'='", u"','", 
+                     u"'+'", u"'-'", u"'/'", u"'*'", u"'!='", u"'>='", u"'<='", 
+                     u"'<'", u"'>'", u"'('", u"')'", u"'{'", u"'}'", u"'['", 
+                     u"']'", u"';'", u"':'", u"'.'" ]
 
     symbolicNames = [ u"<INVALID>", u"INICIO", u"SI", u"SINO", u"MIENTRAS", 
                       u"LEER", u"IMPRIMIR", u"FUNCION", u"ENTERO", u"DECIMAL", 
                       u"TEXTO", u"RETORNAR", u"LISTA", u"CLASE", u"ATRIBUTOS", 
                       u"METODOS", u"HEREDA", u"NADA", u"PRIVADO", u"PUBLICO", 
-                      u"Y", u"REFERENCIA", u"O", u"IDENTICO", u"IGUAL", 
-                      u"COMA", u"SUMA", u"RESTA", u"DIVISION", u"MULTIPLICACION", 
-                      u"DIFERENTE", u"MAYORIGUAL", u"MENORIGUAL", u"MENOR", 
-                      u"MAYOR", u"PARENTESIS1", u"PARENTESIS2", u"LLAVE1", 
-                      u"LLAVE2", u"CORCHETE1", u"CORCHETE2", u"PUNTOYCOMA", 
-                      u"DOSPUNTOS", u"PUNTO", u"ID", u"CTENTERO", u"CTEDECIMAL", 
-                      u"CTETEXTO", u"WS" ]
+                      u"ASIGNAR", u"Y", u"REFERENCIA", u"O", u"IDENTICO", 
+                      u"IGUAL", u"COMA", u"SUMA", u"RESTA", u"DIVISION", 
+                      u"MULTIPLICACION", u"DIFERENTE", u"MAYORIGUAL", u"MENORIGUAL", 
+                      u"MENOR", u"MAYOR", u"PARENTESIS1", u"PARENTESIS2", 
+                      u"LLAVE1", u"LLAVE2", u"CORCHETE1", u"CORCHETE2", 
+                      u"PUNTOYCOMA", u"DOSPUNTOS", u"PUNTO", u"ID", u"CTENTERO", 
+                      u"CTEDECIMAL", u"CTETEXTO", u"WS" ]
 
     RULE_programa = 0
     RULE_programaAux1 = 1
@@ -276,61 +280,62 @@ class misterParser ( Parser ):
     RULE_cteL = 15
     RULE_cteLAux1 = 16
     RULE_valor = 17
-    RULE_parametros = 18
-    RULE_parametrosAux1 = 19
-    RULE_parametrosAux2 = 20
-    RULE_parametrosAux3 = 21
-    RULE_func = 22
-    RULE_funcAux1 = 23
-    RULE_funcAux2 = 24
-    RULE_funcAux3 = 25
-    RULE_expresion = 26
-    RULE_expresionAux1 = 27
-    RULE_expresionAux2 = 28
-    RULE_estatuto = 29
-    RULE_declaracion = 30
-    RULE_declaracionAux1 = 31
-    RULE_declaracionAux2 = 32
-    RULE_exp = 33
-    RULE_expAux1 = 34
-    RULE_llamarFunc = 35
-    RULE_llamarFuncAux1 = 36
-    RULE_llamarFuncAux2 = 37
-    RULE_llamarFuncAux3 = 38
-    RULE_termino = 39
-    RULE_terminoAux1 = 40
-    RULE_factor = 41
-    RULE_factorAux1 = 42
-    RULE_compuesto = 43
-    RULE_compuestoAux1 = 44
-    RULE_asignacion = 45
-    RULE_asignacionAux1 = 46
-    RULE_condicion = 47
-    RULE_condicionAux1 = 48
-    RULE_bloque = 49
-    RULE_bloqueAux1 = 50
-    RULE_ciclo = 51
-    RULE_escritura = 52
-    RULE_escrituraAux1 = 53
-    RULE_lectura = 54
-    RULE_c_class = 55
-    RULE_classAux1 = 56
-    RULE_classAux2 = 57
-    RULE_classAux3 = 58
-    RULE_atrib = 59
-    RULE_atribAux1 = 60
-    RULE_atribAux2 = 61
-    RULE_atribAux3 = 62
-    RULE_metod = 63
-    RULE_metodAux1 = 64
-    RULE_metodAux2 = 65
-    RULE_metodAux3 = 66
+    RULE_valorAux1 = 18
+    RULE_parametros = 19
+    RULE_parametrosAux1 = 20
+    RULE_parametrosAux2 = 21
+    RULE_parametrosAux3 = 22
+    RULE_func = 23
+    RULE_funcAux1 = 24
+    RULE_funcAux2 = 25
+    RULE_funcAux3 = 26
+    RULE_expresion = 27
+    RULE_expresionAux1 = 28
+    RULE_expresionAux2 = 29
+    RULE_estatuto = 30
+    RULE_declaracion = 31
+    RULE_declaracionAux1 = 32
+    RULE_declaracionAux2 = 33
+    RULE_exp = 34
+    RULE_expAux1 = 35
+    RULE_llamarFunc = 36
+    RULE_llamarFuncAux1 = 37
+    RULE_llamarFuncAux2 = 38
+    RULE_llamarFuncAux3 = 39
+    RULE_termino = 40
+    RULE_terminoAux1 = 41
+    RULE_factor = 42
+    RULE_factorAux1 = 43
+    RULE_compuesto = 44
+    RULE_compuestoAux1 = 45
+    RULE_asignacion = 46
+    RULE_asignacionAux1 = 47
+    RULE_condicion = 48
+    RULE_condicionAux1 = 49
+    RULE_bloque = 50
+    RULE_bloqueAux1 = 51
+    RULE_ciclo = 52
+    RULE_escritura = 53
+    RULE_escrituraAux1 = 54
+    RULE_lectura = 55
+    RULE_c_class = 56
+    RULE_classAux1 = 57
+    RULE_classAux2 = 58
+    RULE_classAux3 = 59
+    RULE_atrib = 60
+    RULE_atribAux1 = 61
+    RULE_atribAux2 = 62
+    RULE_atribAux3 = 63
+    RULE_metod = 64
+    RULE_metodAux1 = 65
+    RULE_metodAux2 = 66
+    RULE_metodAux3 = 67
 
     ruleNames =  [ "programa", "programaAux1", "programaAux3", "programaAux4", 
                    "v_vars", "varsAux1", "v_varsDefinicion", "varsAux2", 
                    "varsAux3", "varsAux4", "varsAux5", "v_varsAtrib", "varsAtribAux1", 
-                   "tipo", "l_list", "cteL", "cteLAux1", "valor", "parametros", 
-                   "parametrosAux1", "parametrosAux2", "parametrosAux3", 
+                   "tipo", "l_list", "cteL", "cteLAux1", "valor", "valorAux1", 
+                   "parametros", "parametrosAux1", "parametrosAux2", "parametrosAux3", 
                    "func", "funcAux1", "funcAux2", "funcAux3", "expresion", 
                    "expresionAux1", "expresionAux2", "estatuto", "declaracion", 
                    "declaracionAux1", "declaracionAux2", "exp", "expAux1", 
@@ -362,35 +367,36 @@ class misterParser ( Parser ):
     NADA=17
     PRIVADO=18
     PUBLICO=19
-    Y=20
-    REFERENCIA=21
-    O=22
-    IDENTICO=23
-    IGUAL=24
-    COMA=25
-    SUMA=26
-    RESTA=27
-    DIVISION=28
-    MULTIPLICACION=29
-    DIFERENTE=30
-    MAYORIGUAL=31
-    MENORIGUAL=32
-    MENOR=33
-    MAYOR=34
-    PARENTESIS1=35
-    PARENTESIS2=36
-    LLAVE1=37
-    LLAVE2=38
-    CORCHETE1=39
-    CORCHETE2=40
-    PUNTOYCOMA=41
-    DOSPUNTOS=42
-    PUNTO=43
-    ID=44
-    CTENTERO=45
-    CTEDECIMAL=46
-    CTETEXTO=47
-    WS=48
+    ASIGNAR=20
+    Y=21
+    REFERENCIA=22
+    O=23
+    IDENTICO=24
+    IGUAL=25
+    COMA=26
+    SUMA=27
+    RESTA=28
+    DIVISION=29
+    MULTIPLICACION=30
+    DIFERENTE=31
+    MAYORIGUAL=32
+    MENORIGUAL=33
+    MENOR=34
+    MAYOR=35
+    PARENTESIS1=36
+    PARENTESIS2=37
+    LLAVE1=38
+    LLAVE2=39
+    CORCHETE1=40
+    CORCHETE2=41
+    PUNTOYCOMA=42
+    DOSPUNTOS=43
+    PUNTO=44
+    ID=45
+    CTENTERO=46
+    CTEDECIMAL=47
+    CTETEXTO=48
+    WS=49
 
     def __init__(self, input:TokenStream):
         super().__init__(input)
@@ -450,19 +456,19 @@ class misterParser ( Parser ):
         self.enterRule(localctx, 0, self.RULE_programa)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 134
-            self.programaAux1()
-            self.state = 135
-            self.programaAux3()
             self.state = 136
-            self.match(misterParser.FUNCION)
+            self.programaAux1()
             self.state = 137
-            self.match(misterParser.ENTERO)
+            self.programaAux3()
             self.state = 138
-            self.match(misterParser.INICIO)
+            self.match(misterParser.FUNCION)
             self.state = 139
-            self.func()
+            self.match(misterParser.ENTERO)
             self.state = 140
+            self.match(misterParser.INICIO)
+            self.state = 141
+            self.func()
+            self.state = 142
             self.match(misterParser.EOF)
         except RecognitionException as re:
             localctx.exception = re
@@ -509,20 +515,20 @@ class misterParser ( Parser ):
         localctx = misterParser.ProgramaAux1Context(self, self._ctx, self.state)
         self.enterRule(localctx, 2, self.RULE_programaAux1)
         try:
-            self.state = 149
+            self.state = 151
             token = self._input.LA(1)
             if token in [misterParser.ENTERO, misterParser.DECIMAL, misterParser.TEXTO, misterParser.LISTA, misterParser.ID]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 142
+                self.state = 144
                 self.v_vars()
-                self.state = 143
+                self.state = 145
                 self.programaAux1()
 
             elif token in [misterParser.CLASE]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 145
+                self.state = 147
                 self.c_class()
-                self.state = 146
+                self.state = 148
                 self.programaAux1()
 
             elif token in [misterParser.FUNCION]:
@@ -583,19 +589,19 @@ class misterParser ( Parser ):
         localctx = misterParser.ProgramaAux3Context(self, self._ctx, self.state)
         self.enterRule(localctx, 4, self.RULE_programaAux3)
         try:
-            self.state = 158
+            self.state = 160
             la_ = self._interp.adaptivePredict(self._input,1,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 151
-                self.match(misterParser.FUNCION)
-                self.state = 152
-                self.programaAux4()
                 self.state = 153
-                self.match(misterParser.ID)
+                self.match(misterParser.FUNCION)
                 self.state = 154
-                self.func()
+                self.programaAux4()
                 self.state = 155
+                self.match(misterParser.ID)
+                self.state = 156
+                self.func()
+                self.state = 157
                 self.programaAux3()
                 pass
 
@@ -645,16 +651,16 @@ class misterParser ( Parser ):
         localctx = misterParser.ProgramaAux4Context(self, self._ctx, self.state)
         self.enterRule(localctx, 6, self.RULE_programaAux4)
         try:
-            self.state = 162
+            self.state = 164
             token = self._input.LA(1)
             if token in [misterParser.ENTERO, misterParser.DECIMAL, misterParser.TEXTO]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 160
+                self.state = 162
                 self.tipo()
 
             elif token in [misterParser.NADA]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 161
+                self.state = 163
                 self.match(misterParser.NADA)
 
             else:
@@ -702,9 +708,9 @@ class misterParser ( Parser ):
         self.enterRule(localctx, 8, self.RULE_v_vars)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 164
+            self.state = 166
             self.varsAux1()
-            self.state = 165
+            self.state = 167
             self.v_varsDefinicion()
         except RecognitionException as re:
             localctx.exception = re
@@ -750,21 +756,21 @@ class misterParser ( Parser ):
         localctx = misterParser.VarsAux1Context(self, self._ctx, self.state)
         self.enterRule(localctx, 10, self.RULE_varsAux1)
         try:
-            self.state = 170
+            self.state = 172
             token = self._input.LA(1)
             if token in [misterParser.ID]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 167
+                self.state = 169
                 self.match(misterParser.ID)
 
             elif token in [misterParser.ENTERO, misterParser.DECIMAL, misterParser.TEXTO]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 168
+                self.state = 170
                 self.tipo()
 
             elif token in [misterParser.LISTA]:
                 self.enterOuterAlt(localctx, 3)
-                self.state = 169
+                self.state = 171
                 self.l_list()
 
             else:
@@ -811,9 +817,9 @@ class misterParser ( Parser ):
         self.enterRule(localctx, 12, self.RULE_v_varsDefinicion)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 172
+            self.state = 174
             self.varsAux4()
-            self.state = 173
+            self.state = 175
             self.match(misterParser.PUNTOYCOMA)
         except RecognitionException as re:
             localctx.exception = re
@@ -855,13 +861,13 @@ class misterParser ( Parser ):
         localctx = misterParser.VarsAux2Context(self, self._ctx, self.state)
         self.enterRule(localctx, 14, self.RULE_varsAux2)
         try:
-            self.state = 178
+            self.state = 180
             token = self._input.LA(1)
             if token in [misterParser.IGUAL]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 175
+                self.state = 177
                 self.match(misterParser.IGUAL)
-                self.state = 176
+                self.state = 178
                 self.varsAux3()
 
             elif token in [misterParser.COMA, misterParser.PUNTOYCOMA]:
@@ -912,16 +918,16 @@ class misterParser ( Parser ):
         localctx = misterParser.VarsAux3Context(self, self._ctx, self.state)
         self.enterRule(localctx, 16, self.RULE_varsAux3)
         try:
-            self.state = 182
+            self.state = 184
             token = self._input.LA(1)
             if token in [misterParser.SUMA, misterParser.RESTA, misterParser.PARENTESIS1, misterParser.ID, misterParser.CTENTERO, misterParser.CTEDECIMAL, misterParser.CTETEXTO]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 180
+                self.state = 182
                 self.expresion()
 
             elif token in [misterParser.CORCHETE1]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 181
+                self.state = 183
                 self.cteL()
 
             else:
@@ -972,11 +978,11 @@ class misterParser ( Parser ):
         self.enterRule(localctx, 18, self.RULE_varsAux4)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 184
-            self.match(misterParser.ID)
-            self.state = 185
-            self.varsAux2()
             self.state = 186
+            self.match(misterParser.ID)
+            self.state = 187
+            self.varsAux2()
+            self.state = 188
             self.varsAux5()
         except RecognitionException as re:
             localctx.exception = re
@@ -1025,17 +1031,17 @@ class misterParser ( Parser ):
         localctx = misterParser.VarsAux5Context(self, self._ctx, self.state)
         self.enterRule(localctx, 20, self.RULE_varsAux5)
         try:
-            self.state = 194
+            self.state = 196
             token = self._input.LA(1)
             if token in [misterParser.COMA]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 188
-                self.match(misterParser.COMA)
-                self.state = 189
-                self.match(misterParser.ID)
                 self.state = 190
-                self.varsAux2()
+                self.match(misterParser.COMA)
                 self.state = 191
+                self.match(misterParser.ID)
+                self.state = 192
+                self.varsAux2()
+                self.state = 193
                 self.varsAux5()
 
             elif token in [misterParser.PUNTOYCOMA]:
@@ -1087,9 +1093,9 @@ class misterParser ( Parser ):
         self.enterRule(localctx, 22, self.RULE_v_varsAtrib)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 196
+            self.state = 198
             self.varsAtribAux1()
-            self.state = 197
+            self.state = 199
             self.v_varsDefinicion()
         except RecognitionException as re:
             localctx.exception = re
@@ -1132,16 +1138,16 @@ class misterParser ( Parser ):
         localctx = misterParser.VarsAtribAux1Context(self, self._ctx, self.state)
         self.enterRule(localctx, 24, self.RULE_varsAtribAux1)
         try:
-            self.state = 201
+            self.state = 203
             token = self._input.LA(1)
             if token in [misterParser.ENTERO, misterParser.DECIMAL, misterParser.TEXTO]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 199
+                self.state = 201
                 self.tipo()
 
             elif token in [misterParser.LISTA]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 200
+                self.state = 202
                 self.l_list()
 
             else:
@@ -1191,7 +1197,7 @@ class misterParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 203
+            self.state = 205
             _la = self._input.LA(1)
             if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << misterParser.ENTERO) | (1 << misterParser.DECIMAL) | (1 << misterParser.TEXTO))) != 0)):
                 self._errHandler.recoverInline(self)
@@ -1241,11 +1247,11 @@ class misterParser ( Parser ):
         self.enterRule(localctx, 28, self.RULE_l_list)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 205
-            self.match(misterParser.LISTA)
-            self.state = 206
-            self.tipo()
             self.state = 207
+            self.match(misterParser.LISTA)
+            self.state = 208
+            self.tipo()
+            self.state = 209
             self.match(misterParser.CTENTERO)
         except RecognitionException as re:
             localctx.exception = re
@@ -1295,13 +1301,13 @@ class misterParser ( Parser ):
         self.enterRule(localctx, 30, self.RULE_cteL)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 209
-            self.match(misterParser.CORCHETE1)
-            self.state = 210
-            self.valor()
             self.state = 211
-            self.cteLAux1()
+            self.match(misterParser.CORCHETE1)
             self.state = 212
+            self.valor()
+            self.state = 213
+            self.cteLAux1()
+            self.state = 214
             self.match(misterParser.CORCHETE2)
         except RecognitionException as re:
             localctx.exception = re
@@ -1347,15 +1353,15 @@ class misterParser ( Parser ):
         localctx = misterParser.CteLAux1Context(self, self._ctx, self.state)
         self.enterRule(localctx, 32, self.RULE_cteLAux1)
         try:
-            self.state = 219
+            self.state = 221
             token = self._input.LA(1)
             if token in [misterParser.COMA]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 214
-                self.match(misterParser.COMA)
-                self.state = 215
-                self.valor()
                 self.state = 216
+                self.match(misterParser.COMA)
+                self.state = 217
+                self.valor()
+                self.state = 218
                 self.cteLAux1()
 
             elif token in [misterParser.CORCHETE2]:
@@ -1389,6 +1395,10 @@ class misterParser ( Parser ):
             return self.getTypedRuleContext(misterParser.CompuestoContext,0)
 
 
+        def valorAux1(self):
+            return self.getTypedRuleContext(misterParser.ValorAux1Context,0)
+
+
         def CTETEXTO(self):
             return self.getToken(misterParser.CTETEXTO, 0)
 
@@ -1411,27 +1421,80 @@ class misterParser ( Parser ):
         localctx = misterParser.ValorContext(self, self._ctx, self.state)
         self.enterRule(localctx, 34, self.RULE_valor)
         try:
-            self.state = 225
+            self.state = 229
             token = self._input.LA(1)
             if token in [misterParser.CTENTERO]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 221
+                self.state = 223
                 self.match(misterParser.CTENTERO)
 
             elif token in [misterParser.CTEDECIMAL]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 222
+                self.state = 224
                 self.match(misterParser.CTEDECIMAL)
 
             elif token in [misterParser.ID]:
                 self.enterOuterAlt(localctx, 3)
-                self.state = 223
+                self.state = 225
                 self.compuesto()
+                self.state = 226
+                self.valorAux1()
 
             elif token in [misterParser.CTETEXTO]:
                 self.enterOuterAlt(localctx, 4)
-                self.state = 224
+                self.state = 228
                 self.match(misterParser.CTETEXTO)
+
+            else:
+                raise NoViableAltException(self)
+
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+    class ValorAux1Context(ParserRuleContext):
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def llamarFunc(self):
+            return self.getTypedRuleContext(misterParser.LlamarFuncContext,0)
+
+
+        def getRuleIndex(self):
+            return misterParser.RULE_valorAux1
+
+        def enterRule(self, listener:ParseTreeListener):
+            if isinstance( listener, misterListener ):
+                listener.enterValorAux1(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if isinstance( listener, misterListener ):
+                listener.exitValorAux1(self)
+
+
+
+
+    def valorAux1(self):
+
+        localctx = misterParser.ValorAux1Context(self, self._ctx, self.state)
+        self.enterRule(localctx, 36, self.RULE_valorAux1)
+        try:
+            self.state = 233
+            token = self._input.LA(1)
+            if token in [misterParser.PARENTESIS1]:
+                self.enterOuterAlt(localctx, 1)
+                self.state = 231
+                self.llamarFunc()
+
+            elif token in [misterParser.Y, misterParser.O, misterParser.IDENTICO, misterParser.COMA, misterParser.SUMA, misterParser.RESTA, misterParser.DIVISION, misterParser.MULTIPLICACION, misterParser.DIFERENTE, misterParser.MAYORIGUAL, misterParser.MENORIGUAL, misterParser.MENOR, misterParser.MAYOR, misterParser.PARENTESIS2, misterParser.CORCHETE2, misterParser.PUNTOYCOMA]:
+                self.enterOuterAlt(localctx, 2)
+
 
             else:
                 raise NoViableAltException(self)
@@ -1477,14 +1540,14 @@ class misterParser ( Parser ):
     def parametros(self):
 
         localctx = misterParser.ParametrosContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 36, self.RULE_parametros)
+        self.enterRule(localctx, 38, self.RULE_parametros)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 227
+            self.state = 235
             self.match(misterParser.PARENTESIS1)
-            self.state = 228
+            self.state = 236
             self.parametrosAux1()
-            self.state = 229
+            self.state = 237
             self.match(misterParser.PARENTESIS2)
         except RecognitionException as re:
             localctx.exception = re
@@ -1528,17 +1591,17 @@ class misterParser ( Parser ):
     def parametrosAux1(self):
 
         localctx = misterParser.ParametrosAux1Context(self, self._ctx, self.state)
-        self.enterRule(localctx, 38, self.RULE_parametrosAux1)
+        self.enterRule(localctx, 40, self.RULE_parametrosAux1)
         try:
-            self.state = 236
+            self.state = 244
             token = self._input.LA(1)
             if token in [misterParser.ENTERO, misterParser.DECIMAL, misterParser.TEXTO, misterParser.LISTA]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 231
+                self.state = 239
                 self.parametrosAux2()
-                self.state = 232
+                self.state = 240
                 self.match(misterParser.ID)
-                self.state = 233
+                self.state = 241
                 self.parametrosAux3()
 
             elif token in [misterParser.PARENTESIS2]:
@@ -1587,18 +1650,18 @@ class misterParser ( Parser ):
     def parametrosAux2(self):
 
         localctx = misterParser.ParametrosAux2Context(self, self._ctx, self.state)
-        self.enterRule(localctx, 40, self.RULE_parametrosAux2)
+        self.enterRule(localctx, 42, self.RULE_parametrosAux2)
         try:
-            self.state = 240
+            self.state = 248
             token = self._input.LA(1)
             if token in [misterParser.ENTERO, misterParser.DECIMAL, misterParser.TEXTO]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 238
+                self.state = 246
                 self.tipo()
 
             elif token in [misterParser.LISTA]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 239
+                self.state = 247
                 self.l_list()
 
             else:
@@ -1649,19 +1712,19 @@ class misterParser ( Parser ):
     def parametrosAux3(self):
 
         localctx = misterParser.ParametrosAux3Context(self, self._ctx, self.state)
-        self.enterRule(localctx, 42, self.RULE_parametrosAux3)
+        self.enterRule(localctx, 44, self.RULE_parametrosAux3)
         try:
-            self.state = 248
+            self.state = 256
             token = self._input.LA(1)
             if token in [misterParser.COMA]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 242
+                self.state = 250
                 self.match(misterParser.COMA)
-                self.state = 243
+                self.state = 251
                 self.parametrosAux2()
-                self.state = 244
+                self.state = 252
                 self.match(misterParser.ID)
-                self.state = 245
+                self.state = 253
                 self.parametrosAux3()
 
             elif token in [misterParser.PARENTESIS2]:
@@ -1724,20 +1787,20 @@ class misterParser ( Parser ):
     def func(self):
 
         localctx = misterParser.FuncContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 44, self.RULE_func)
+        self.enterRule(localctx, 46, self.RULE_func)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 250
+            self.state = 258
             self.parametros()
-            self.state = 251
+            self.state = 259
             self.match(misterParser.LLAVE1)
-            self.state = 252
+            self.state = 260
             self.funcAux1()
-            self.state = 253
+            self.state = 261
             self.funcAux2()
-            self.state = 254
+            self.state = 262
             self.funcAux3()
-            self.state = 255
+            self.state = 263
             self.match(misterParser.LLAVE2)
         except RecognitionException as re:
             localctx.exception = re
@@ -1778,15 +1841,15 @@ class misterParser ( Parser ):
     def funcAux1(self):
 
         localctx = misterParser.FuncAux1Context(self, self._ctx, self.state)
-        self.enterRule(localctx, 46, self.RULE_funcAux1)
+        self.enterRule(localctx, 48, self.RULE_funcAux1)
         try:
-            self.state = 261
-            la_ = self._interp.adaptivePredict(self._input,13,self._ctx)
+            self.state = 269
+            la_ = self._interp.adaptivePredict(self._input,14,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 257
+                self.state = 265
                 self.v_vars()
-                self.state = 258
+                self.state = 266
                 self.funcAux1()
                 pass
 
@@ -1835,15 +1898,15 @@ class misterParser ( Parser ):
     def funcAux2(self):
 
         localctx = misterParser.FuncAux2Context(self, self._ctx, self.state)
-        self.enterRule(localctx, 48, self.RULE_funcAux2)
+        self.enterRule(localctx, 50, self.RULE_funcAux2)
         try:
-            self.state = 267
+            self.state = 275
             token = self._input.LA(1)
-            if token in [misterParser.SI, misterParser.MIENTRAS, misterParser.LEER, misterParser.IMPRIMIR, misterParser.SUMA, misterParser.RESTA, misterParser.PARENTESIS1, misterParser.ID, misterParser.CTENTERO, misterParser.CTEDECIMAL, misterParser.CTETEXTO]:
+            if token in [misterParser.SI, misterParser.MIENTRAS, misterParser.LEER, misterParser.IMPRIMIR, misterParser.ASIGNAR, misterParser.SUMA, misterParser.RESTA, misterParser.PARENTESIS1, misterParser.ID, misterParser.CTENTERO, misterParser.CTEDECIMAL, misterParser.CTETEXTO]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 263
+                self.state = 271
                 self.estatuto()
-                self.state = 264
+                self.state = 272
                 self.funcAux2()
 
             elif token in [misterParser.RETORNAR, misterParser.LLAVE2]:
@@ -1894,17 +1957,17 @@ class misterParser ( Parser ):
     def funcAux3(self):
 
         localctx = misterParser.FuncAux3Context(self, self._ctx, self.state)
-        self.enterRule(localctx, 50, self.RULE_funcAux3)
+        self.enterRule(localctx, 52, self.RULE_funcAux3)
         try:
-            self.state = 274
+            self.state = 282
             token = self._input.LA(1)
             if token in [misterParser.RETORNAR]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 269
+                self.state = 277
                 self.match(misterParser.RETORNAR)
-                self.state = 270
+                self.state = 278
                 self.expresion()
-                self.state = 271
+                self.state = 279
                 self.match(misterParser.PUNTOYCOMA)
 
             elif token in [misterParser.LLAVE2]:
@@ -1953,12 +2016,12 @@ class misterParser ( Parser ):
     def expresion(self):
 
         localctx = misterParser.ExpresionContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 52, self.RULE_expresion)
+        self.enterRule(localctx, 54, self.RULE_expresion)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 276
+            self.state = 284
             self.declaracion()
-            self.state = 277
+            self.state = 285
             self.expresionAux1()
         except RecognitionException as re:
             localctx.exception = re
@@ -1999,15 +2062,15 @@ class misterParser ( Parser ):
     def expresionAux1(self):
 
         localctx = misterParser.ExpresionAux1Context(self, self._ctx, self.state)
-        self.enterRule(localctx, 54, self.RULE_expresionAux1)
+        self.enterRule(localctx, 56, self.RULE_expresionAux1)
         try:
-            self.state = 283
+            self.state = 291
             token = self._input.LA(1)
             if token in [misterParser.Y, misterParser.O]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 279
+                self.state = 287
                 self.expresionAux2()
-                self.state = 280
+                self.state = 288
                 self.expresion()
 
             elif token in [misterParser.COMA, misterParser.PARENTESIS2, misterParser.PUNTOYCOMA]:
@@ -2054,11 +2117,11 @@ class misterParser ( Parser ):
     def expresionAux2(self):
 
         localctx = misterParser.ExpresionAux2Context(self, self._ctx, self.state)
-        self.enterRule(localctx, 56, self.RULE_expresionAux2)
+        self.enterRule(localctx, 58, self.RULE_expresionAux2)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 285
+            self.state = 293
             _la = self._input.LA(1)
             if not(_la==misterParser.Y or _la==misterParser.O):
                 self._errHandler.recoverInline(self)
@@ -2122,48 +2185,44 @@ class misterParser ( Parser ):
     def estatuto(self):
 
         localctx = misterParser.EstatutoContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 58, self.RULE_estatuto)
+        self.enterRule(localctx, 60, self.RULE_estatuto)
         try:
-            self.state = 295
-            la_ = self._interp.adaptivePredict(self._input,17,self._ctx)
-            if la_ == 1:
+            self.state = 303
+            token = self._input.LA(1)
+            if token in [misterParser.ASIGNAR]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 287
+                self.state = 295
                 self.asignacion()
-                pass
 
-            elif la_ == 2:
+            elif token in [misterParser.SI]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 288
+                self.state = 296
                 self.condicion()
-                pass
 
-            elif la_ == 3:
+            elif token in [misterParser.SUMA, misterParser.RESTA, misterParser.PARENTESIS1, misterParser.ID, misterParser.CTENTERO, misterParser.CTEDECIMAL, misterParser.CTETEXTO]:
                 self.enterOuterAlt(localctx, 3)
-                self.state = 289
+                self.state = 297
                 self.expresion()
-                self.state = 290
+                self.state = 298
                 self.match(misterParser.PUNTOYCOMA)
-                pass
 
-            elif la_ == 4:
+            elif token in [misterParser.IMPRIMIR]:
                 self.enterOuterAlt(localctx, 4)
-                self.state = 292
+                self.state = 300
                 self.escritura()
-                pass
 
-            elif la_ == 5:
+            elif token in [misterParser.MIENTRAS]:
                 self.enterOuterAlt(localctx, 5)
-                self.state = 293
+                self.state = 301
                 self.ciclo()
-                pass
 
-            elif la_ == 6:
+            elif token in [misterParser.LEER]:
                 self.enterOuterAlt(localctx, 6)
-                self.state = 294
+                self.state = 302
                 self.lectura()
-                pass
 
+            else:
+                raise NoViableAltException(self)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -2204,12 +2263,12 @@ class misterParser ( Parser ):
     def declaracion(self):
 
         localctx = misterParser.DeclaracionContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 60, self.RULE_declaracion)
+        self.enterRule(localctx, 62, self.RULE_declaracion)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 297
+            self.state = 305
             self.exp()
-            self.state = 298
+            self.state = 306
             self.declaracionAux2()
         except RecognitionException as re:
             localctx.exception = re
@@ -2260,11 +2319,11 @@ class misterParser ( Parser ):
     def declaracionAux1(self):
 
         localctx = misterParser.DeclaracionAux1Context(self, self._ctx, self.state)
-        self.enterRule(localctx, 62, self.RULE_declaracionAux1)
+        self.enterRule(localctx, 64, self.RULE_declaracionAux1)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 300
+            self.state = 308
             _la = self._input.LA(1)
             if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << misterParser.IDENTICO) | (1 << misterParser.DIFERENTE) | (1 << misterParser.MAYORIGUAL) | (1 << misterParser.MENORIGUAL) | (1 << misterParser.MENOR) | (1 << misterParser.MAYOR))) != 0)):
                 self._errHandler.recoverInline(self)
@@ -2309,15 +2368,15 @@ class misterParser ( Parser ):
     def declaracionAux2(self):
 
         localctx = misterParser.DeclaracionAux2Context(self, self._ctx, self.state)
-        self.enterRule(localctx, 64, self.RULE_declaracionAux2)
+        self.enterRule(localctx, 66, self.RULE_declaracionAux2)
         try:
-            self.state = 306
+            self.state = 314
             token = self._input.LA(1)
             if token in [misterParser.IDENTICO, misterParser.DIFERENTE, misterParser.MAYORIGUAL, misterParser.MENORIGUAL, misterParser.MENOR, misterParser.MAYOR]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 302
+                self.state = 310
                 self.declaracionAux1()
-                self.state = 303
+                self.state = 311
                 self.exp()
 
             elif token in [misterParser.Y, misterParser.O, misterParser.COMA, misterParser.PARENTESIS2, misterParser.PUNTOYCOMA]:
@@ -2366,12 +2425,12 @@ class misterParser ( Parser ):
     def exp(self):
 
         localctx = misterParser.ExpContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 66, self.RULE_exp)
+        self.enterRule(localctx, 68, self.RULE_exp)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 308
+            self.state = 316
             self.termino()
-            self.state = 309
+            self.state = 317
             self.expAux1()
         except RecognitionException as re:
             localctx.exception = re
@@ -2418,26 +2477,26 @@ class misterParser ( Parser ):
     def expAux1(self):
 
         localctx = misterParser.ExpAux1Context(self, self._ctx, self.state)
-        self.enterRule(localctx, 68, self.RULE_expAux1)
+        self.enterRule(localctx, 70, self.RULE_expAux1)
         try:
-            self.state = 320
+            self.state = 328
             token = self._input.LA(1)
             if token in [misterParser.SUMA]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 311
+                self.state = 319
                 self.match(misterParser.SUMA)
-                self.state = 312
+                self.state = 320
                 self.termino()
-                self.state = 313
+                self.state = 321
                 self.expAux1()
 
             elif token in [misterParser.RESTA]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 315
+                self.state = 323
                 self.match(misterParser.RESTA)
-                self.state = 316
+                self.state = 324
                 self.termino()
-                self.state = 317
+                self.state = 325
                 self.expAux1()
 
             elif token in [misterParser.Y, misterParser.O, misterParser.IDENTICO, misterParser.COMA, misterParser.DIFERENTE, misterParser.MAYORIGUAL, misterParser.MENORIGUAL, misterParser.MENOR, misterParser.MAYOR, misterParser.PARENTESIS2, misterParser.PUNTOYCOMA]:
@@ -2488,14 +2547,14 @@ class misterParser ( Parser ):
     def llamarFunc(self):
 
         localctx = misterParser.LlamarFuncContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 70, self.RULE_llamarFunc)
+        self.enterRule(localctx, 72, self.RULE_llamarFunc)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 322
+            self.state = 330
             self.match(misterParser.PARENTESIS1)
-            self.state = 323
+            self.state = 331
             self.llamarFuncAux1()
-            self.state = 324
+            self.state = 332
             self.match(misterParser.PARENTESIS2)
         except RecognitionException as re:
             localctx.exception = re
@@ -2542,24 +2601,24 @@ class misterParser ( Parser ):
     def llamarFuncAux1(self):
 
         localctx = misterParser.LlamarFuncAux1Context(self, self._ctx, self.state)
-        self.enterRule(localctx, 72, self.RULE_llamarFuncAux1)
+        self.enterRule(localctx, 74, self.RULE_llamarFuncAux1)
         try:
-            self.state = 333
+            self.state = 341
             token = self._input.LA(1)
             if token in [misterParser.SUMA, misterParser.RESTA, misterParser.PARENTESIS1, misterParser.ID, misterParser.CTENTERO, misterParser.CTEDECIMAL, misterParser.CTETEXTO]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 326
+                self.state = 334
                 self.expresion()
-                self.state = 327
+                self.state = 335
                 self.llamarFuncAux2()
 
             elif token in [misterParser.REFERENCIA]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 329
+                self.state = 337
                 self.match(misterParser.REFERENCIA)
-                self.state = 330
+                self.state = 338
                 self.match(misterParser.ID)
-                self.state = 331
+                self.state = 339
                 self.llamarFuncAux2()
 
             elif token in [misterParser.PARENTESIS2]:
@@ -2611,17 +2670,17 @@ class misterParser ( Parser ):
     def llamarFuncAux2(self):
 
         localctx = misterParser.LlamarFuncAux2Context(self, self._ctx, self.state)
-        self.enterRule(localctx, 74, self.RULE_llamarFuncAux2)
+        self.enterRule(localctx, 76, self.RULE_llamarFuncAux2)
         try:
-            self.state = 340
+            self.state = 348
             token = self._input.LA(1)
             if token in [misterParser.COMA]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 335
+                self.state = 343
                 self.match(misterParser.COMA)
-                self.state = 336
+                self.state = 344
                 self.llamarFuncAux3()
-                self.state = 337
+                self.state = 345
                 self.llamarFuncAux2()
 
             elif token in [misterParser.PARENTESIS2]:
@@ -2672,20 +2731,20 @@ class misterParser ( Parser ):
     def llamarFuncAux3(self):
 
         localctx = misterParser.LlamarFuncAux3Context(self, self._ctx, self.state)
-        self.enterRule(localctx, 76, self.RULE_llamarFuncAux3)
+        self.enterRule(localctx, 78, self.RULE_llamarFuncAux3)
         try:
-            self.state = 345
+            self.state = 353
             token = self._input.LA(1)
             if token in [misterParser.SUMA, misterParser.RESTA, misterParser.PARENTESIS1, misterParser.ID, misterParser.CTENTERO, misterParser.CTEDECIMAL, misterParser.CTETEXTO]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 342
+                self.state = 350
                 self.expresion()
 
             elif token in [misterParser.REFERENCIA]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 343
+                self.state = 351
                 self.match(misterParser.REFERENCIA)
-                self.state = 344
+                self.state = 352
                 self.match(misterParser.ID)
 
             else:
@@ -2730,12 +2789,12 @@ class misterParser ( Parser ):
     def termino(self):
 
         localctx = misterParser.TerminoContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 78, self.RULE_termino)
+        self.enterRule(localctx, 80, self.RULE_termino)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 347
+            self.state = 355
             self.factor()
-            self.state = 348
+            self.state = 356
             self.terminoAux1()
         except RecognitionException as re:
             localctx.exception = re
@@ -2782,26 +2841,26 @@ class misterParser ( Parser ):
     def terminoAux1(self):
 
         localctx = misterParser.TerminoAux1Context(self, self._ctx, self.state)
-        self.enterRule(localctx, 80, self.RULE_terminoAux1)
+        self.enterRule(localctx, 82, self.RULE_terminoAux1)
         try:
-            self.state = 359
+            self.state = 367
             token = self._input.LA(1)
             if token in [misterParser.MULTIPLICACION]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 350
+                self.state = 358
                 self.match(misterParser.MULTIPLICACION)
-                self.state = 351
+                self.state = 359
                 self.factor()
-                self.state = 352
+                self.state = 360
                 self.terminoAux1()
 
             elif token in [misterParser.DIVISION]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 354
+                self.state = 362
                 self.match(misterParser.DIVISION)
-                self.state = 355
+                self.state = 363
                 self.factor()
-                self.state = 356
+                self.state = 364
                 self.terminoAux1()
 
             elif token in [misterParser.Y, misterParser.O, misterParser.IDENTICO, misterParser.COMA, misterParser.SUMA, misterParser.RESTA, misterParser.DIFERENTE, misterParser.MAYORIGUAL, misterParser.MENORIGUAL, misterParser.MENOR, misterParser.MAYOR, misterParser.PARENTESIS2, misterParser.PUNTOYCOMA]:
@@ -2860,29 +2919,29 @@ class misterParser ( Parser ):
     def factor(self):
 
         localctx = misterParser.FactorContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 82, self.RULE_factor)
+        self.enterRule(localctx, 84, self.RULE_factor)
         try:
-            self.state = 369
+            self.state = 377
             token = self._input.LA(1)
             if token in [misterParser.PARENTESIS1]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 361
+                self.state = 369
                 self.match(misterParser.PARENTESIS1)
-                self.state = 362
+                self.state = 370
                 self.expresion()
-                self.state = 363
+                self.state = 371
                 self.match(misterParser.PARENTESIS2)
 
             elif token in [misterParser.ID, misterParser.CTENTERO, misterParser.CTEDECIMAL, misterParser.CTETEXTO]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 365
+                self.state = 373
                 self.valor()
 
             elif token in [misterParser.SUMA, misterParser.RESTA]:
                 self.enterOuterAlt(localctx, 3)
-                self.state = 366
+                self.state = 374
                 self.factorAux1()
-                self.state = 367
+                self.state = 375
                 self.valor()
 
             else:
@@ -2925,11 +2984,11 @@ class misterParser ( Parser ):
     def factorAux1(self):
 
         localctx = misterParser.FactorAux1Context(self, self._ctx, self.state)
-        self.enterRule(localctx, 84, self.RULE_factorAux1)
+        self.enterRule(localctx, 86, self.RULE_factorAux1)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 371
+            self.state = 379
             _la = self._input.LA(1)
             if not(_la==misterParser.SUMA or _la==misterParser.RESTA):
                 self._errHandler.recoverInline(self)
@@ -2973,12 +3032,12 @@ class misterParser ( Parser ):
     def compuesto(self):
 
         localctx = misterParser.CompuestoContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 86, self.RULE_compuesto)
+        self.enterRule(localctx, 88, self.RULE_compuesto)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 373
+            self.state = 381
             self.match(misterParser.ID)
-            self.state = 374
+            self.state = 382
             self.compuestoAux1()
         except RecognitionException as re:
             localctx.exception = re
@@ -3000,10 +3059,6 @@ class misterParser ( Parser ):
         def ID(self):
             return self.getToken(misterParser.ID, 0)
 
-        def llamarFunc(self):
-            return self.getTypedRuleContext(misterParser.LlamarFuncContext,0)
-
-
         def getRuleIndex(self):
             return misterParser.RULE_compuestoAux1
 
@@ -3021,20 +3076,18 @@ class misterParser ( Parser ):
     def compuestoAux1(self):
 
         localctx = misterParser.CompuestoAux1Context(self, self._ctx, self.state)
-        self.enterRule(localctx, 88, self.RULE_compuestoAux1)
+        self.enterRule(localctx, 90, self.RULE_compuestoAux1)
         try:
-            self.state = 380
+            self.state = 387
             token = self._input.LA(1)
             if token in [misterParser.PUNTO]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 376
+                self.state = 384
                 self.match(misterParser.PUNTO)
-                self.state = 377
+                self.state = 385
                 self.match(misterParser.ID)
-                self.state = 378
-                self.llamarFunc()
 
-            elif token in [misterParser.Y, misterParser.O, misterParser.IDENTICO, misterParser.COMA, misterParser.SUMA, misterParser.RESTA, misterParser.DIVISION, misterParser.MULTIPLICACION, misterParser.DIFERENTE, misterParser.MAYORIGUAL, misterParser.MENORIGUAL, misterParser.MENOR, misterParser.MAYOR, misterParser.PARENTESIS2, misterParser.CORCHETE2, misterParser.PUNTOYCOMA]:
+            elif token in [misterParser.Y, misterParser.O, misterParser.IDENTICO, misterParser.IGUAL, misterParser.COMA, misterParser.SUMA, misterParser.RESTA, misterParser.DIVISION, misterParser.MULTIPLICACION, misterParser.DIFERENTE, misterParser.MAYORIGUAL, misterParser.MENORIGUAL, misterParser.MENOR, misterParser.MAYOR, misterParser.PARENTESIS1, misterParser.PARENTESIS2, misterParser.CORCHETE2, misterParser.PUNTOYCOMA]:
                 self.enterOuterAlt(localctx, 2)
 
 
@@ -3055,8 +3108,12 @@ class misterParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def ID(self):
-            return self.getToken(misterParser.ID, 0)
+        def ASIGNAR(self):
+            return self.getToken(misterParser.ASIGNAR, 0)
+
+        def compuesto(self):
+            return self.getTypedRuleContext(misterParser.CompuestoContext,0)
+
 
         def IGUAL(self):
             return self.getToken(misterParser.IGUAL, 0)
@@ -3085,16 +3142,18 @@ class misterParser ( Parser ):
     def asignacion(self):
 
         localctx = misterParser.AsignacionContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 90, self.RULE_asignacion)
+        self.enterRule(localctx, 92, self.RULE_asignacion)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 382
-            self.match(misterParser.ID)
-            self.state = 383
+            self.state = 389
+            self.match(misterParser.ASIGNAR)
+            self.state = 390
+            self.compuesto()
+            self.state = 391
             self.match(misterParser.IGUAL)
-            self.state = 384
+            self.state = 392
             self.asignacionAux1()
-            self.state = 385
+            self.state = 393
             self.match(misterParser.PUNTOYCOMA)
         except RecognitionException as re:
             localctx.exception = re
@@ -3135,18 +3194,18 @@ class misterParser ( Parser ):
     def asignacionAux1(self):
 
         localctx = misterParser.AsignacionAux1Context(self, self._ctx, self.state)
-        self.enterRule(localctx, 92, self.RULE_asignacionAux1)
+        self.enterRule(localctx, 94, self.RULE_asignacionAux1)
         try:
-            self.state = 389
+            self.state = 397
             token = self._input.LA(1)
             if token in [misterParser.SUMA, misterParser.RESTA, misterParser.PARENTESIS1, misterParser.ID, misterParser.CTENTERO, misterParser.CTEDECIMAL, misterParser.CTETEXTO]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 387
+                self.state = 395
                 self.expresion()
 
             elif token in [misterParser.CORCHETE1]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 388
+                self.state = 396
                 self.cteL()
 
             else:
@@ -3204,20 +3263,20 @@ class misterParser ( Parser ):
     def condicion(self):
 
         localctx = misterParser.CondicionContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 94, self.RULE_condicion)
+        self.enterRule(localctx, 96, self.RULE_condicion)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 391
+            self.state = 399
             self.match(misterParser.SI)
-            self.state = 392
+            self.state = 400
             self.match(misterParser.PARENTESIS1)
-            self.state = 393
+            self.state = 401
             self.expresion()
-            self.state = 394
+            self.state = 402
             self.match(misterParser.PARENTESIS2)
-            self.state = 395
+            self.state = 403
             self.bloque()
-            self.state = 396
+            self.state = 404
             self.condicionAux1()
         except RecognitionException as re:
             localctx.exception = re
@@ -3257,18 +3316,18 @@ class misterParser ( Parser ):
     def condicionAux1(self):
 
         localctx = misterParser.CondicionAux1Context(self, self._ctx, self.state)
-        self.enterRule(localctx, 96, self.RULE_condicionAux1)
+        self.enterRule(localctx, 98, self.RULE_condicionAux1)
         try:
-            self.state = 401
+            self.state = 409
             token = self._input.LA(1)
             if token in [misterParser.SINO]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 398
+                self.state = 406
                 self.match(misterParser.SINO)
-                self.state = 399
+                self.state = 407
                 self.bloque()
 
-            elif token in [misterParser.SI, misterParser.MIENTRAS, misterParser.LEER, misterParser.IMPRIMIR, misterParser.RETORNAR, misterParser.SUMA, misterParser.RESTA, misterParser.PARENTESIS1, misterParser.LLAVE2, misterParser.ID, misterParser.CTENTERO, misterParser.CTEDECIMAL, misterParser.CTETEXTO]:
+            elif token in [misterParser.SI, misterParser.MIENTRAS, misterParser.LEER, misterParser.IMPRIMIR, misterParser.RETORNAR, misterParser.ASIGNAR, misterParser.SUMA, misterParser.RESTA, misterParser.PARENTESIS1, misterParser.LLAVE2, misterParser.ID, misterParser.CTENTERO, misterParser.CTEDECIMAL, misterParser.CTETEXTO]:
                 self.enterOuterAlt(localctx, 2)
 
 
@@ -3320,16 +3379,16 @@ class misterParser ( Parser ):
     def bloque(self):
 
         localctx = misterParser.BloqueContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 98, self.RULE_bloque)
+        self.enterRule(localctx, 100, self.RULE_bloque)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 403
+            self.state = 411
             self.match(misterParser.LLAVE1)
-            self.state = 404
+            self.state = 412
             self.estatuto()
-            self.state = 405
+            self.state = 413
             self.bloqueAux1()
-            self.state = 406
+            self.state = 414
             self.match(misterParser.LLAVE2)
         except RecognitionException as re:
             localctx.exception = re
@@ -3370,15 +3429,15 @@ class misterParser ( Parser ):
     def bloqueAux1(self):
 
         localctx = misterParser.BloqueAux1Context(self, self._ctx, self.state)
-        self.enterRule(localctx, 100, self.RULE_bloqueAux1)
+        self.enterRule(localctx, 102, self.RULE_bloqueAux1)
         try:
-            self.state = 412
+            self.state = 420
             token = self._input.LA(1)
-            if token in [misterParser.SI, misterParser.MIENTRAS, misterParser.LEER, misterParser.IMPRIMIR, misterParser.SUMA, misterParser.RESTA, misterParser.PARENTESIS1, misterParser.ID, misterParser.CTENTERO, misterParser.CTEDECIMAL, misterParser.CTETEXTO]:
+            if token in [misterParser.SI, misterParser.MIENTRAS, misterParser.LEER, misterParser.IMPRIMIR, misterParser.ASIGNAR, misterParser.SUMA, misterParser.RESTA, misterParser.PARENTESIS1, misterParser.ID, misterParser.CTENTERO, misterParser.CTEDECIMAL, misterParser.CTETEXTO]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 408
+                self.state = 416
                 self.estatuto()
-                self.state = 409
+                self.state = 417
                 self.bloqueAux1()
 
             elif token in [misterParser.LLAVE2]:
@@ -3436,18 +3495,18 @@ class misterParser ( Parser ):
     def ciclo(self):
 
         localctx = misterParser.CicloContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 102, self.RULE_ciclo)
+        self.enterRule(localctx, 104, self.RULE_ciclo)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 414
+            self.state = 422
             self.match(misterParser.MIENTRAS)
-            self.state = 415
+            self.state = 423
             self.match(misterParser.PARENTESIS1)
-            self.state = 416
+            self.state = 424
             self.expresion()
-            self.state = 417
+            self.state = 425
             self.match(misterParser.PARENTESIS2)
-            self.state = 418
+            self.state = 426
             self.bloque()
         except RecognitionException as re:
             localctx.exception = re
@@ -3500,20 +3559,20 @@ class misterParser ( Parser ):
     def escritura(self):
 
         localctx = misterParser.EscrituraContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 104, self.RULE_escritura)
+        self.enterRule(localctx, 106, self.RULE_escritura)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 420
+            self.state = 428
             self.match(misterParser.IMPRIMIR)
-            self.state = 421
+            self.state = 429
             self.match(misterParser.PARENTESIS1)
-            self.state = 422
+            self.state = 430
             self.expresion()
-            self.state = 423
+            self.state = 431
             self.escrituraAux1()
-            self.state = 424
+            self.state = 432
             self.match(misterParser.PARENTESIS2)
-            self.state = 425
+            self.state = 433
             self.match(misterParser.PUNTOYCOMA)
         except RecognitionException as re:
             localctx.exception = re
@@ -3557,17 +3616,17 @@ class misterParser ( Parser ):
     def escrituraAux1(self):
 
         localctx = misterParser.EscrituraAux1Context(self, self._ctx, self.state)
-        self.enterRule(localctx, 106, self.RULE_escrituraAux1)
+        self.enterRule(localctx, 108, self.RULE_escrituraAux1)
         try:
-            self.state = 432
+            self.state = 440
             token = self._input.LA(1)
             if token in [misterParser.COMA]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 427
+                self.state = 435
                 self.match(misterParser.COMA)
-                self.state = 428
+                self.state = 436
                 self.expresion()
-                self.state = 429
+                self.state = 437
                 self.escrituraAux1()
 
             elif token in [misterParser.PARENTESIS2]:
@@ -3623,18 +3682,18 @@ class misterParser ( Parser ):
     def lectura(self):
 
         localctx = misterParser.LecturaContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 108, self.RULE_lectura)
+        self.enterRule(localctx, 110, self.RULE_lectura)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 434
+            self.state = 442
             self.match(misterParser.LEER)
-            self.state = 435
+            self.state = 443
             self.match(misterParser.PARENTESIS1)
-            self.state = 436
+            self.state = 444
             self.match(misterParser.ID)
-            self.state = 437
+            self.state = 445
             self.match(misterParser.PARENTESIS2)
-            self.state = 438
+            self.state = 446
             self.match(misterParser.PUNTOYCOMA)
         except RecognitionException as re:
             localctx.exception = re
@@ -3694,24 +3753,24 @@ class misterParser ( Parser ):
     def c_class(self):
 
         localctx = misterParser.C_classContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 110, self.RULE_c_class)
+        self.enterRule(localctx, 112, self.RULE_c_class)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 440
+            self.state = 448
             self.match(misterParser.CLASE)
-            self.state = 441
+            self.state = 449
             self.match(misterParser.ID)
-            self.state = 442
+            self.state = 450
             self.classAux1()
-            self.state = 443
+            self.state = 451
             self.match(misterParser.LLAVE1)
-            self.state = 444
+            self.state = 452
             self.classAux2()
-            self.state = 445
+            self.state = 453
             self.classAux3()
-            self.state = 446
+            self.state = 454
             self.match(misterParser.LLAVE2)
-            self.state = 447
+            self.state = 455
             self.match(misterParser.PUNTOYCOMA)
         except RecognitionException as re:
             localctx.exception = re
@@ -3750,15 +3809,15 @@ class misterParser ( Parser ):
     def classAux1(self):
 
         localctx = misterParser.ClassAux1Context(self, self._ctx, self.state)
-        self.enterRule(localctx, 112, self.RULE_classAux1)
+        self.enterRule(localctx, 114, self.RULE_classAux1)
         try:
-            self.state = 452
+            self.state = 460
             token = self._input.LA(1)
             if token in [misterParser.HEREDA]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 449
+                self.state = 457
                 self.match(misterParser.HEREDA)
-                self.state = 450
+                self.state = 458
                 self.match(misterParser.ID)
 
             elif token in [misterParser.LLAVE1]:
@@ -3803,13 +3862,13 @@ class misterParser ( Parser ):
     def classAux2(self):
 
         localctx = misterParser.ClassAux2Context(self, self._ctx, self.state)
-        self.enterRule(localctx, 114, self.RULE_classAux2)
+        self.enterRule(localctx, 116, self.RULE_classAux2)
         try:
-            self.state = 456
+            self.state = 464
             token = self._input.LA(1)
             if token in [misterParser.ATRIBUTOS]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 454
+                self.state = 462
                 self.atrib()
 
             elif token in [misterParser.METODOS, misterParser.LLAVE2]:
@@ -3854,13 +3913,13 @@ class misterParser ( Parser ):
     def classAux3(self):
 
         localctx = misterParser.ClassAux3Context(self, self._ctx, self.state)
-        self.enterRule(localctx, 116, self.RULE_classAux3)
+        self.enterRule(localctx, 118, self.RULE_classAux3)
         try:
-            self.state = 460
+            self.state = 468
             token = self._input.LA(1)
             if token in [misterParser.METODOS]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 458
+                self.state = 466
                 self.metod()
 
             elif token in [misterParser.LLAVE2]:
@@ -3911,14 +3970,14 @@ class misterParser ( Parser ):
     def atrib(self):
 
         localctx = misterParser.AtribContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 118, self.RULE_atrib)
+        self.enterRule(localctx, 120, self.RULE_atrib)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 462
+            self.state = 470
             self.match(misterParser.ATRIBUTOS)
-            self.state = 463
+            self.state = 471
             self.match(misterParser.DOSPUNTOS)
-            self.state = 464
+            self.state = 472
             self.atribAux1()
         except RecognitionException as re:
             localctx.exception = re
@@ -3963,14 +4022,14 @@ class misterParser ( Parser ):
     def atribAux1(self):
 
         localctx = misterParser.AtribAux1Context(self, self._ctx, self.state)
-        self.enterRule(localctx, 120, self.RULE_atribAux1)
+        self.enterRule(localctx, 122, self.RULE_atribAux1)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 466
+            self.state = 474
             self.atribAux2()
-            self.state = 467
+            self.state = 475
             self.v_varsAtrib()
-            self.state = 468
+            self.state = 476
             self.atribAux3()
         except RecognitionException as re:
             localctx.exception = re
@@ -4009,11 +4068,11 @@ class misterParser ( Parser ):
     def atribAux2(self):
 
         localctx = misterParser.AtribAux2Context(self, self._ctx, self.state)
-        self.enterRule(localctx, 122, self.RULE_atribAux2)
+        self.enterRule(localctx, 124, self.RULE_atribAux2)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 470
+            self.state = 478
             _la = self._input.LA(1)
             if not(_la==misterParser.PRIVADO or _la==misterParser.PUBLICO):
                 self._errHandler.recoverInline(self)
@@ -4054,13 +4113,13 @@ class misterParser ( Parser ):
     def atribAux3(self):
 
         localctx = misterParser.AtribAux3Context(self, self._ctx, self.state)
-        self.enterRule(localctx, 124, self.RULE_atribAux3)
+        self.enterRule(localctx, 126, self.RULE_atribAux3)
         try:
-            self.state = 474
+            self.state = 482
             token = self._input.LA(1)
             if token in [misterParser.PRIVADO, misterParser.PUBLICO]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 472
+                self.state = 480
                 self.atribAux1()
 
             elif token in [misterParser.METODOS, misterParser.LLAVE2]:
@@ -4111,14 +4170,14 @@ class misterParser ( Parser ):
     def metod(self):
 
         localctx = misterParser.MetodContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 126, self.RULE_metod)
+        self.enterRule(localctx, 128, self.RULE_metod)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 476
+            self.state = 484
             self.match(misterParser.METODOS)
-            self.state = 477
+            self.state = 485
             self.match(misterParser.DOSPUNTOS)
-            self.state = 478
+            self.state = 486
             self.metodAux1()
         except RecognitionException as re:
             localctx.exception = re
@@ -4169,18 +4228,18 @@ class misterParser ( Parser ):
     def metodAux1(self):
 
         localctx = misterParser.MetodAux1Context(self, self._ctx, self.state)
-        self.enterRule(localctx, 128, self.RULE_metodAux1)
+        self.enterRule(localctx, 130, self.RULE_metodAux1)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 480
+            self.state = 488
             self.match(misterParser.FUNCION)
-            self.state = 481
+            self.state = 489
             self.metodAux2()
-            self.state = 482
+            self.state = 490
             self.match(misterParser.ID)
-            self.state = 483
+            self.state = 491
             self.func()
-            self.state = 484
+            self.state = 492
             self.metodAux3()
         except RecognitionException as re:
             localctx.exception = re
@@ -4220,18 +4279,18 @@ class misterParser ( Parser ):
     def metodAux2(self):
 
         localctx = misterParser.MetodAux2Context(self, self._ctx, self.state)
-        self.enterRule(localctx, 130, self.RULE_metodAux2)
+        self.enterRule(localctx, 132, self.RULE_metodAux2)
         try:
-            self.state = 488
+            self.state = 496
             token = self._input.LA(1)
             if token in [misterParser.ENTERO, misterParser.DECIMAL, misterParser.TEXTO]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 486
+                self.state = 494
                 self.tipo()
 
             elif token in [misterParser.NADA]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 487
+                self.state = 495
                 self.match(misterParser.NADA)
 
             else:
@@ -4272,13 +4331,13 @@ class misterParser ( Parser ):
     def metodAux3(self):
 
         localctx = misterParser.MetodAux3Context(self, self._ctx, self.state)
-        self.enterRule(localctx, 132, self.RULE_metodAux3)
+        self.enterRule(localctx, 134, self.RULE_metodAux3)
         try:
-            self.state = 492
+            self.state = 500
             token = self._input.LA(1)
             if token in [misterParser.FUNCION]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 490
+                self.state = 498
                 self.metodAux1()
 
             elif token in [misterParser.LLAVE2]:

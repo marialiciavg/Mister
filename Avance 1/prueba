@@ -32,11 +32,12 @@ FUNCION ENTERO INICIO (ENTERO parametro1 , DECIMAL parametro2) {
 	TEXTO string="hola", string="como";
 
 	SI(5>(4/5+num2) && -4==+4 || "hola"!="como"){
-		persona.print(&rob, num);
+		persona.print(&rob, num.nombre());
+		ASIGNAR persona.nombre = persona.edad; 
 	}
 	SINO{
 		MIENTRAS (x > y){
-			x = x + 1;
+		ASIGNAR	x = x + 1;
 		}
 	}
 

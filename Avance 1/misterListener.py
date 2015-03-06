@@ -166,6 +166,15 @@ class misterListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by misterParser#valorAux1.
+    def enterValorAux1(self, ctx):
+        pass
+
+    # Exit a parse tree produced by misterParser#valorAux1.
+    def exitValorAux1(self, ctx):
+        pass
+
+
     # Enter a parse tree produced by misterParser#parametros.
     def enterParametros(self, ctx):
         pass

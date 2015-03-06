@@ -74,8 +74,12 @@ cteLAux1: COMA valor cteLAux1
 
 valor: CTENTERO
     | CTEDECIMAL
-    | compuesto
+    | compuesto valorAux1
     | CTETEXTO
+    ;
+
+valorAux1: llamarFunc
+    |
     ;
 
 parametros: PARENTESIS1 parametrosAux1 PARENTESIS2
@@ -187,11 +191,11 @@ factorAux1: SUMA
 compuesto: ID compuestoAux1
     ;
     
-compuestoAux1: PUNTO ID llamarFunc
+compuestoAux1: PUNTO ID
     |
     ;
 
-asignacion: ID IGUAL asignacionAux1 PUNTOYCOMA
+asignacion: ASIGNAR compuesto IGUAL asignacionAux1 PUNTOYCOMA
     ;
 
 asignacionAux1: expresion
@@ -292,6 +296,7 @@ HEREDA:                 'HEREDA' ;
 NADA:                   'NADA' ;
 PRIVADO:                'PRIVADO' ;
 PUBLICO:                'PUBLICO' ;
+ASIGNAR:                 'ASIGNAR';
 Y:                       '&&' ;
 REFERENCIA:              '&' ;
 O:                       '||' ;
