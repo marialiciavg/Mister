@@ -31,6 +31,33 @@ class misterListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by misterParser#programaAux5.
+    def enterProgramaAux5(self, ctx):
+        pass
+
+    # Exit a parse tree produced by misterParser#programaAux5.
+    def exitProgramaAux5(self, ctx):
+        pass
+
+
+    # Enter a parse tree produced by misterParser#programaAux6.
+    def enterProgramaAux6(self, ctx):
+        pass
+
+    # Exit a parse tree produced by misterParser#programaAux6.
+    def exitProgramaAux6(self, ctx):
+        pass
+
+
+    # Enter a parse tree produced by misterParser#programaAux7.
+    def enterProgramaAux7(self, ctx):
+        pass
+
+    # Exit a parse tree produced by misterParser#programaAux7.
+    def exitProgramaAux7(self, ctx):
+        pass
+
+
     # Enter a parse tree produced by misterParser#programaAux4.
     def enterProgramaAux4(self, ctx):
         pass
