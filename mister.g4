@@ -8,7 +8,7 @@ options {
 // Reglas de gramatica
 //=======================================================
 
-programa: programaAux1 programaAux3 FUNCION ENTERO INICIO func EOF
+programa: programaAux1 programaAux3 EOF
     ;
 
 programaAux1: v_vars programaAux1
@@ -16,8 +16,20 @@ programaAux1: v_vars programaAux1
     |
     ;
 
-programaAux3: FUNCION programaAux4 ID func programaAux3
-    |
+programaAux3: FUNCION programaAux5
+    ;
+
+programaAux5: ENTERO programaAux6
+    | DECIMAL programaAux7
+    | TEXTO programaAux7
+    | NADA programaAux7
+    ;
+
+programaAux6: INICIO func 
+    | programaAux7
+    ;
+
+programaAux7: ID func programaAux3
     ;
     
 programaAux4: tipo
