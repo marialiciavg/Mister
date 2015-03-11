@@ -239,19 +239,31 @@ class misterParser ( Parser ):
 # 0 -> void, 1 -> entero, 2 -> decimal, 3 -> texto, 4 -> lista
     grammarFileName = "java-escape"
 
-    contEnteros = 0;
+    contEnteros = 0
 
-    contDecimal = 0;
+    contDecimal = 0
 
-    contClases = 0;
+    contClases = 0
 
-    contLista = 0;
+    contLista = 0
 
-    contTexto = 0;
+    contTexto = 0
 
-    funcionActual = None;
+    AuxTipo = None
 
-    claseActual = None;
+    AuxTipoVar = None
+
+    AuxVisVar = None
+
+    AuxTipoLista = None
+
+    funcionActual = None
+
+    claseActual = None
+
+    variableActual = None
+
+    AuxPadre = None
 
     dirPrincipal = {'global':[None, None, None, {}]}
 
@@ -459,7 +471,53 @@ class misterParser ( Parser ):
             if isinstance( listener, misterListener ):
                 listener.exitPrograma(self)
 
+    def insertarFunc(self):
+        self.funcionActual = self.getCurrentToken().text
+        if self.claseActual == None:
+            self.dirPrincipal[self.funcionActual] = [self.AuxTipo, None, None, {}]
+        else:
+            self.dirPrincipal[self.claseActual][1][self.funcionActual] = [self.AuxTipo, {}]
+        self.AuxTipo = None
 
+    def insertarClase(self):
+        self.dirPrincipal[self.claseActual] = [None, {}, self.AuxPadre, {} ]
+        self.AuxPadre = None
+
+    def insertarVariable(self):
+        direccion = None
+        if self.AuxTipoVar == "ENTERO":
+            direccion = self.contEnteros
+            self.contEnteros = self.contEnteros + 1
+        elif self.AuxTipoVar == "DECIMAL":
+            direccion = self.contDecimal
+            self.contDecimal = self.contDecimal + 1
+        elif self.AuxTipoVar == "TEXTO":
+            direccion = self.contTexto
+            self.contTexto = self.contTexto + 1
+        elif self.AuxTipoVar == "LISTA":
+            direccion = self.contLista
+            self.contLista = self.contLista + 1
+        else:
+            direccion = self.contClases
+            self.contClases = self.contClases + 1
+
+        tipo = None
+        if self.AuxTipoLista == None and self.AuxTipoVar != "LISTA":
+            tipo = self.AuxTipoVar
+        else:
+            tipo = self.AuxTipoVar + "," + self.AuxTipoLista
+
+        if self.claseActual == None:
+            if self.funcionActual == None:
+                self.dirPrincipal['global'][3][self.variableActual] = [tipo, direccion]
+            else:
+                self.dirPrincipal[self.funcionActual][3][self.variableActual] = [tipo, direccion]
+        else:
+            if self.funcionActual == None:
+                self.dirPrincipal[self.claseActual][3][self.variableActual] = [tipo, self.AuxVisVar, direccion]
+            else:
+                self.dirPrincipal[self.claseActual][1][self.funcionActual][1][self.variableActual] = [tipo, self.AuxVisVar, direccion]
+        self.variableActual = None
 
 
     def programa(self):
@@ -647,6 +705,7 @@ class misterParser ( Parser ):
                 self.state = 158
                 self.match(misterParser.ENTERO)
                 self.state = 159
+                self.AuxTipo = "ENTERO"
                 self.programaAux6()
 
             elif token in [misterParser.DECIMAL]:
@@ -654,6 +713,7 @@ class misterParser ( Parser ):
                 self.state = 160
                 self.match(misterParser.DECIMAL)
                 self.state = 161
+                self.AuxTipo = "DECIMAL"
                 self.programaAux7()
 
             elif token in [misterParser.TEXTO]:
@@ -661,6 +721,7 @@ class misterParser ( Parser ):
                 self.state = 162
                 self.match(misterParser.TEXTO)
                 self.state = 163
+                self.AuxTipo = "TEXTO"
                 self.programaAux7()
 
             elif token in [misterParser.NADA]:
@@ -668,6 +729,7 @@ class misterParser ( Parser ):
                 self.state = 164
                 self.match(misterParser.NADA)
                 self.state = 165
+                self.AuxTipo = "NADA"
                 self.programaAux7()
 
             else:
@@ -722,6 +784,7 @@ class misterParser ( Parser ):
             if token in [misterParser.INICIO]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 168
+                self.insertarFunc()
                 self.match(misterParser.INICIO)
                 self.state = 169
                 self.func()
@@ -779,6 +842,7 @@ class misterParser ( Parser ):
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 173
+            self.insertarFunc()
             self.match(misterParser.ID)
             self.state = 174
             self.func()
@@ -931,6 +995,7 @@ class misterParser ( Parser ):
         try:
             self.state = 187
             token = self._input.LA(1)
+            self.AuxTipoVar = self.getCurrentToken().text
             if token in [misterParser.ID]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 184
@@ -1152,11 +1217,15 @@ class misterParser ( Parser ):
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 201
+            self.variableActual = self.getCurrentToken().text
+            self.insertarVariable()
             self.match(misterParser.ID)
             self.state = 202
             self.varsAux2()
             self.state = 203
             self.varsAux5()
+            self.AuxTipoVar = None
+            self.AuxTipoLista = None
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1211,6 +1280,8 @@ class misterParser ( Parser ):
                 self.state = 205
                 self.match(misterParser.COMA)
                 self.state = 206
+                self.variableActual = self.getCurrentToken().text
+                self.insertarVariable()
                 self.match(misterParser.ID)
                 self.state = 207
                 self.varsAux2()
@@ -1313,6 +1384,7 @@ class misterParser ( Parser ):
         try:
             self.state = 218
             token = self._input.LA(1)
+            self.AuxTipoVar = self.getCurrentToken().text
             if token in [misterParser.ENTERO, misterParser.DECIMAL, misterParser.TEXTO]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 216
@@ -1423,6 +1495,7 @@ class misterParser ( Parser ):
             self.state = 222
             self.match(misterParser.LISTA)
             self.state = 223
+            self.AuxTipoLista = self.getCurrentToken().text
             self.tipo()
             self.state = 224
             self.match(misterParser.CTENTERO)
@@ -1722,6 +1795,9 @@ class misterParser ( Parser ):
             self.parametrosAux1()
             self.state = 252
             self.match(misterParser.PARENTESIS2)
+            self.AuxTipoVar = None
+            self.AuxTipoLista = None
+            self.variableActual = None
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1773,6 +1849,8 @@ class misterParser ( Parser ):
                 self.state = 254
                 self.parametrosAux2()
                 self.state = 255
+                self.variableActual = self.getCurrentToken().text
+                self.insertarVariable()
                 self.match(misterParser.ID)
                 self.state = 256
                 self.parametrosAux3()
@@ -1827,6 +1905,7 @@ class misterParser ( Parser ):
         try:
             self.state = 263
             token = self._input.LA(1)
+            self.AuxTipoVar = self.getCurrentToken().text
             if token in [misterParser.ENTERO, misterParser.DECIMAL, misterParser.TEXTO]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 261
@@ -1896,6 +1975,8 @@ class misterParser ( Parser ):
                 self.state = 266
                 self.parametrosAux2()
                 self.state = 267
+                self.variableActual = self.getCurrentToken().text
+                self.insertarVariable()
                 self.match(misterParser.ID)
                 self.state = 268
                 self.parametrosAux3()
@@ -1975,6 +2056,7 @@ class misterParser ( Parser ):
             self.funcAux3()
             self.state = 278
             self.match(misterParser.LLAVE2)
+            self.funcionActual = None
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -3932,10 +4014,12 @@ class misterParser ( Parser ):
             self.state = 463
             self.match(misterParser.CLASE)
             self.state = 464
+            self.claseActual = self.getCurrentToken().text
             self.match(misterParser.ID)
             self.state = 465
             self.classAux1()
             self.state = 466
+            self.insertarClase()
             self.match(misterParser.LLAVE1)
             self.state = 467
             self.classAux2()
@@ -3943,6 +4027,7 @@ class misterParser ( Parser ):
             self.classAux3()
             self.state = 469
             self.match(misterParser.LLAVE2)
+            self.claseActual = None
             self.state = 470
             self.match(misterParser.PUNTOYCOMA)
         except RecognitionException as re:
@@ -3991,6 +4076,7 @@ class misterParser ( Parser ):
                 self.state = 472
                 self.match(misterParser.HEREDA)
                 self.state = 473
+                self.AuxPadre = self.getCurrentToken().text
                 self.match(misterParser.ID)
 
             elif token in [misterParser.LLAVE1]:
@@ -4203,6 +4289,7 @@ class misterParser ( Parser ):
             self.state = 490
             self.v_varsAtrib()
             self.state = 491
+            self.AuxVisVar = None
             self.atribAux3()
         except RecognitionException as re:
             localctx.exception = re
@@ -4247,6 +4334,7 @@ class misterParser ( Parser ):
             self.enterOuterAlt(localctx, 1)
             self.state = 493
             _la = self._input.LA(1)
+            self.AuxVisVar = self.getCurrentToken().text
             if not(_la==misterParser.PRIVADO or _la==misterParser.PUBLICO):
                 self._errHandler.recoverInline(self)
             else:
@@ -4409,6 +4497,7 @@ class misterParser ( Parser ):
             self.state = 504
             self.metodAux2()
             self.state = 505
+            self.insertarFunc()
             self.match(misterParser.ID)
             self.state = 506
             self.func()
@@ -4459,12 +4548,14 @@ class misterParser ( Parser ):
             if token in [misterParser.ENTERO, misterParser.DECIMAL, misterParser.TEXTO]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 509
+                self.AuxTipo = self.getCurrentToken().text
                 self.tipo()
 
             elif token in [misterParser.NADA]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 510
                 self.match(misterParser.NADA)
+                self.AuxTipo = "NADA"
 
             else:
                 raise NoViableAltException(self)
