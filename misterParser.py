@@ -2,6 +2,7 @@
 # encoding: utf-8
 import sys
 from antlr4 import *
+from cubo_semantico import *
 from io import StringIO
 package = globals().get("__package__", None)
 ischild = len(package)>0 if package is not None else False
@@ -274,6 +275,26 @@ class misterParser ( Parser ):
 
     semanticaCompuestoAux2 = None
 
+    pilaO = [] #Pila de operandos
+
+    pOper = [] #Pila de operadores
+
+    pTipos = [] #Pila de tipos de los operadores
+
+    tipoOperando = None
+
+    operando = None
+
+    operador = None
+
+    contQuadTemporales = 0
+
+    cuboSem = cuboSemantico()
+
+    quadList = []
+
+    quadOperadores = [['*','/'],['+','-'],['=','!=','>','>=','<','<='],['&&','||']]
+
     atn = ATNDeserializer().deserialize(serializedATN())
 
     decisionsToDFA = [ DFA(ds, i) for i, ds in enumerate(atn.decisionToState) ]
@@ -487,7 +508,7 @@ class misterParser ( Parser ):
         if self.claseActual == None:
             self.dirPrincipal[self.funcionActual] = [self.AuxTipo, None, None, {}, [0,0,0,0], []]
         else:
-            self.dirPrincipal[self.claseActual][1][self.funcionActual] = [self.AuxTipo, {}, [0,0,0,0], []]
+            self.dirPrincipal[self.claseActual][1][self.funcionActual] = [self.AuxTipo, {}, [0,0,0,0],[]]
         self.AuxTipo = None
 
     def insertarClase(self):
@@ -685,16 +706,52 @@ class misterParser ( Parser ):
         self._syntaxErrors = self._syntaxErrors + 1
         return
 
-    def encontrarTipoFuncionClase(self, padre):
+    def encontrarTipoFuncionClase(self, padre, funcion):
         while True:
             dictAux = self.dirPrincipal[padre][1]
             for key in dictAux.keys():
-                if self.semanticaCompuestoAux2 == key:
+                if funcion == key:
                     return dictAux[key][0]
             padre = self.dirPrincipal[padre][2]
             if padre == None:
                 break
         return
+
+    def obtenerTipo(self, stringVariable):
+        if stringVariable == None or self._syntaxErrors > 0:
+            return None
+        listaAux = stringVariable.split(".")
+        if len(listaAux) == 1:
+            if listaAux[0].find("(") > 0:
+                listaAux[0] = listaAux[0].replace("(", "")
+                if self.claseActual == None:
+                    return self.dirPrincipal[listaAux[0]][0]
+                else:
+                    return encontrarTipoFuncionClase(self.claseActual, listaAux[0])
+            else:
+                if self.claseActual == None:
+                    if self.funcionActual == None:
+                        return self.dirPrincipal["global"][3][listaAux[0]][0]
+                    else:
+                        auxiliar = self.dirPrincipal[self.funcionActual][3].get(listaAux[0])
+                        if auxiliar != None:
+                            return auxiliar[0]
+                        else:
+                            return self.dirPrincipal["global"][3][listaAux[0]][0]
+                else:
+                    if self.funcionActual == None:
+                        return self.dirPrincipal[self.claseActual][3][listaAux[0]][0]
+                    else:
+                        auxiliar = self.dirPrincipal[self.claseActual][1][self.funcionActual][1].get(listaAux[0])
+                        if auxiliar != None:
+                            return auxiliar[0]
+                        else:
+                            return self.dirPrincipal[self.claseActual][3][listaAux[0]][0]
+        else:
+            if listaAux[1].find("(") > 0:
+                return encontrarTipoFuncionClase(listaAux[0], listaAux[1].replace("(", ""))
+            else:
+                return self.dirPrincipal[listaAux[0]][3][listaAux[1]][0]
 
     def checarClase(self):
         if self.dirPrincipal.get(self.AuxTipoVar) == None:
@@ -729,18 +786,32 @@ class misterParser ( Parser ):
     
     def checarParametro(self):
         variableParametro = self.getCurrentToken().text
-        if self.claseActual == None:
-            if self.funcionActual == None:
-                if self.semanticaCompuestoAux2 == None:
-                    dic = self.dirPrincipal[self.semanticaCompuestoAux]
-                    if dic[5][self.contAuxParametroActual] != self.dirPrincipal['global'][3][variableParametro][0]
-                        print ("Semantic error: line " + str(self.getCurrentToken().line) + ":" + str(self.getCurrentToken().column) + " El tipo de parametro no es el esperado" )
-                        self._syntaxErrors = self._syntaxErrors + 1
-                        return
-                else:
-                    dic = self.dirPrincipal['global'][3][self.semanticaCompuestoAux]
-                    if self.encontrarTipoFuncionClase(dic[0]) != self.
+        
+    def insertarValorTipo(self,op,tipoOp):
+        self.pilaO.append(op)
+        self.pTipos.append(tipoOp)
 
+    def insertarOperador(self,op):
+        self.pOper.append(op)
+
+    def crearCuadruplo(self,op):
+        #OP = 0 - mult,div 1 - suma,resta 2 - relacionales 3 - logicos
+        if self.pOper:
+            oper = self.pOper.pop()
+            if oper in self.quadOperadores[op]:
+                oDer = self.pilaO.pop()
+                oIzq = self.pilaO.pop()
+                res = self.cuboSem.checarSemanticaExp(oIzq,oDer,oper)
+                if res != None:
+                    self.quadList.append([oper,oIzq,oDer,"t" + self.contQuadTemporales])
+                    self.insertarValorTipo("t" + self.contQuadTemporales,res)
+                    self.contQuadTemporales = self.contQuadTemporales + 1
+                else:
+                    print ("Semantic error: line " + str(self.getCurrentToken().line) + ":" + str(self.getCurrentToken().column) + " Tipos de operandos no compatibles" )
+                    self._syntaxErrors = self._syntaxErrors + 1
+                    return
+            else:
+                self.pOper.append(oper)
 
     def programa(self):
 
@@ -1896,12 +1967,18 @@ class misterParser ( Parser ):
             if token in [misterParser.CTENTERO]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 238
+                self.tipoOperando = 'ENTERO'
+                self.operando = self.getCurrentToken().text
                 self.match(misterParser.CTENTERO)
+                self.insertarValorTipo(self.operando, self.tipoOperando)
 
             elif token in [misterParser.CTEDECIMAL]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 239
+                tipoOperando = 'DECIMAL'
+                self.operando = self.getCurrentToken().text
                 self.match(misterParser.CTEDECIMAL)
+                self.insertarValorTipo(self.operando, self.tipoOperando)
 
             elif token in [misterParser.ID]:
                 self.enterOuterAlt(localctx, 3)
@@ -1912,10 +1989,14 @@ class misterParser ( Parser ):
                 semanticaCompuestoAux = None
                 semanticaCompuestoAux2 = None
 
+
             elif token in [misterParser.CTETEXTO]:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 243
+                tipoOperando = 'TEXTO'
+                self.operando = self.getCurrentToken().text
                 self.match(misterParser.CTETEXTO)
+                self.insertarValorTipo(self.operando, self.tipoOperando)
 
             else:
                 raise NoViableAltException(self)
@@ -1963,21 +2044,35 @@ class misterParser ( Parser ):
                 self.enterOuterAlt(localctx, 1)
                 self.state = 246
                 self.checarMetodo()
+                if self.semanticaCompuestoAux2 == None:
+                    self.tipoOperando = self.obtenerTipo(self.semanticaCompuestoAux + '(')
+                    self.insertarValorTipo(self.semanticaCompuestoAux + '(',self.tipoOperando)
+                else:
+                    self.tipoOperando = self.obtenerTipo(self.semanticaCompuestoAux + '.' + self.semanticaCompuestoAux2 + '(')
+                    self.insertarValorTipo(self.semanticaCompuestoAux + '.' + self.semanticaCompuestoAux2,self.tipoOperando + '(')
                 self.llamarFunc()
 
             elif token in [misterParser.Y, misterParser.O, misterParser.IDENTICO, misterParser.COMA, misterParser.SUMA, misterParser.RESTA, misterParser.DIVISION, misterParser.MULTIPLICACION, misterParser.DIFERENTE, misterParser.MAYORIGUAL, misterParser.MENORIGUAL, misterParser.MENOR, misterParser.MAYOR, misterParser.PARENTESIS2, misterParser.CORCHETE2, misterParser.PUNTOYCOMA]:
                 if self.semanticaCompuestoAux2 == None:
                     self.checarId(self.semanticaCompuestoAux)
+                    self.tipoOperando = self.obtenerTipo(self.semanticaCompuestoAux)
+                    self.insertarValorTipo(self.semanticaCompuestoAux,self.tipoOperando)
                 else:
                     self.checarAtributo(self.semanticaCompuestoAux2)
+                    self.tipoOperando = self.obtenerTipo(self.semanticaCompuestoAux + '.' + self.semanticaCompuestoAux2)
+                    self.insertarValorTipo(self.semanticaCompuestoAux + '.' + self.semanticaCompuestoAux2,self.tipoOperando)
                 self.enterOuterAlt(localctx, 2)
 
 
             else:
                 if self.semanticaCompuestoAux2 == None:
                     self.checarId(self.semanticaCompuestoAux)
+                    self.tipoOperando = self.obtenerTipo(self.semanticaCompuestoAux)
+                    self.insertarValorTipo(self.semanticaCompuestoAux,self.tipoOperando)
                 else:
                     self.checarAtributo(self.semanticaCompuestoAux2)
+                    self.tipoOperando = self.obtenerTipo(self.semanticaCompuestoAux + '.' + self.semanticaCompuestoAux2)
+                    self.insertarValorTipo(self.semanticaCompuestoAux + '.' + self.semanticaCompuestoAux2,self.tipoOperando)
                 raise NoViableAltException(self)
 
         except RecognitionException as re:
@@ -2560,9 +2655,12 @@ class misterParser ( Parser ):
             if token in [misterParser.Y, misterParser.O]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 302
+                self.operador = self.getCurrentToken().text
                 self.expresionAux2()
+                self.insertarOperador(self.operador)
                 self.state = 303
                 self.expresion()
+                self.crearCuadruplo(3)
 
             elif token in [misterParser.COMA, misterParser.PARENTESIS2, misterParser.PUNTOYCOMA]:
                 self.enterOuterAlt(localctx, 2)
@@ -2866,9 +2964,12 @@ class misterParser ( Parser ):
             if token in [misterParser.IDENTICO, misterParser.DIFERENTE, misterParser.MAYORIGUAL, misterParser.MENORIGUAL, misterParser.MENOR, misterParser.MAYOR]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 325
+                self.operador = self.getCurrentToken().text
                 self.declaracionAux1()
+                self.insertarOperador(self.operador)
                 self.state = 326
                 self.exp()
+                self.crearCuadruplo(2)
 
             elif token in [misterParser.Y, misterParser.O, misterParser.COMA, misterParser.PARENTESIS2, misterParser.PUNTOYCOMA]:
                 self.enterOuterAlt(localctx, 2)
@@ -2921,6 +3022,7 @@ class misterParser ( Parser ):
             self.enterOuterAlt(localctx, 1)
             self.state = 331
             self.termino()
+            self.crearCuadruplo(1)
             self.state = 332
             self.expAux1()
         except RecognitionException as re:
@@ -2976,6 +3078,7 @@ class misterParser ( Parser ):
                 self.enterOuterAlt(localctx, 1)
                 self.state = 334
                 self.match(misterParser.SUMA)
+                self.insertarOperador('+')
                 self.state = 335
                 self.termino()
                 self.state = 336
@@ -2985,6 +3088,7 @@ class misterParser ( Parser ):
                 self.enterOuterAlt(localctx, 2)
                 self.state = 338
                 self.match(misterParser.RESTA)
+                self.insertarOperador('-')
                 self.state = 339
                 self.termino()
                 self.state = 340
@@ -3047,6 +3151,7 @@ class misterParser ( Parser ):
             self.llamarFuncAux1()
             self.state = 347
             self.match(misterParser.PARENTESIS2)
+            
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -3285,6 +3390,7 @@ class misterParser ( Parser ):
             self.enterOuterAlt(localctx, 1)
             self.state = 370
             self.factor()
+            self.crearCuadruplo(0)
             self.state = 371
             self.terminoAux1()
         except RecognitionException as re:
@@ -3340,6 +3446,7 @@ class misterParser ( Parser ):
                 self.enterOuterAlt(localctx, 1)
                 self.state = 373
                 self.match(misterParser.MULTIPLICACION)
+                self.insertarOperador('*')
                 self.state = 374
                 self.factor()
                 self.state = 375
@@ -3349,6 +3456,7 @@ class misterParser ( Parser ):
                 self.enterOuterAlt(localctx, 2)
                 self.state = 377
                 self.match(misterParser.DIVISION)
+                self.insertarOperador('/')
                 self.state = 378
                 self.factor()
                 self.state = 379
@@ -3418,10 +3526,12 @@ class misterParser ( Parser ):
                 self.enterOuterAlt(localctx, 1)
                 self.state = 384
                 self.match(misterParser.PARENTESIS1)
+                self.insertarOperador('(')
                 self.state = 385
                 self.expresion()
                 self.state = 386
                 self.match(misterParser.PARENTESIS2)
+                self.pOper.pop()
 
             elif token in [misterParser.ID, misterParser.CTENTERO, misterParser.CTEDECIMAL, misterParser.CTETEXTO]:
                 self.enterOuterAlt(localctx, 2)
@@ -3529,7 +3639,6 @@ class misterParser ( Parser ):
             self.state = 396
             self.semanticaCompuestoAux = self.getCurrentToken().text
             self.match(misterParser.ID)
-            #self.checarId(self.semanticaCompuestoAux)
             self.state = 397
             self.compuestoAux1()
         except RecognitionException as re:
@@ -3654,6 +3763,7 @@ class misterParser ( Parser ):
             self.asignacionAux1()
             self.state = 408
             self.match(misterParser.PUNTOYCOMA)
+            
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
