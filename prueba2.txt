@@ -1,0 +1,6 @@
+FUNCION ENTERO INICIO (ENTERO parametro1 , DECIMAL parametro2) {
+	ENTERO num, num2;
+	SI(5>(4/5+num) && -4==+4 || "hola"!="como"){
+		num2 + 3;
+	}
+}
