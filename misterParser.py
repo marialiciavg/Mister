@@ -1913,8 +1913,13 @@ class misterParser ( Parser ):
             self.enterOuterAlt(localctx, 1)
             self.state = 201
             self.variableActual = self.getCurrentToken().text
-            self.insertarVariable()
             self.match(misterParser.ID)
+            auxVariableActual = self.variableActual
+            self.insertarVariable()
+            self.checarId(auxVariableActual)
+            self.tipoOperando = self.obtenerTipo(auxVariableActual)
+            auxDir = self.obtenerDireccionVariable(auxVariableActual)
+            self.insertarValorTipo(auxDir,self.tipoOperando)
             self.state = 202
             self.varsAux2()
             self.state = 203
@@ -1976,8 +1981,13 @@ class misterParser ( Parser ):
                 self.match(misterParser.COMA)
                 self.state = 206
                 self.variableActual = self.getCurrentToken().text
-                self.insertarVariable()
                 self.match(misterParser.ID)
+                auxVariableActual = self.variableActual
+                self.insertarVariable()
+                self.checarId(auxVariableActual)
+                self.tipoOperando = self.obtenerTipo(auxVariableActual)
+                auxDir = self.obtenerDireccionVariable(auxVariableActual)
+                self.insertarValorTipo(auxDir,self.tipoOperando)
                 self.state = 207
                 self.varsAux2()
                 self.state = 208

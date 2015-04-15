@@ -33,6 +33,7 @@ FUNCION DECIMAL AREA2( DECIMAL base, DECIMAL altura){
 }
 
 FUNCION ENTERO INICIO (ENTERO parametro1 , DECIMAL parametro2) {
+	DECIMAL y = 5.4;
 	ASIGNAR p.numero3 = p.numero4 + 1;
 	
 	RETORNAR 0;
