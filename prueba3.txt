@@ -1,12 +1,26 @@
+DECIMAL m = 4.0*8.9;
 CLASE PERSONA {
 	ATRIBUTOS:
 		PUBLICO ENTERO numero3;
-		PRIVADO DECIMAL numero4;
+		PUBLICO ENTERO numero4;
 		PUBLICO LISTA ENTERO 3 jeje;
 	METODOS:
 		FUNCION NADA print(ENTERO asdalsd){
 			TEXTO hola;
 			ASIGNAR hola = "hola";
+		}
+};
+
+PERSONA p;
+ENTERO num = p.numero3 + 3;
+
+CLASE NINO HEREDA PERSONA {
+	ATRIBUTOS:
+		PUBLICO ENTERO edad;
+		PRIVADO DECIMAL peso;
+	METODOS:
+		FUNCION NADA print(ENTERO w){
+			
 		}
 };
 
@@ -19,6 +33,8 @@ FUNCION DECIMAL AREA2( DECIMAL base, DECIMAL altura){
 }
 
 FUNCION ENTERO INICIO (ENTERO parametro1 , DECIMAL parametro2) {
+	ASIGNAR p.numero3 = p.numero4 + 1;
+	
 	RETORNAR 0;
 
 }
