@@ -25,6 +25,7 @@ CLASE NINO HEREDA PERSONA {
 };
 
 FUNCION DECIMAL AREA( DECIMAL base, DECIMAL altura){
+	DECIMAL a = base * altura;
 	RETORNAR 4.5;
 }
 
@@ -35,7 +36,8 @@ FUNCION DECIMAL AREA2( DECIMAL base, DECIMAL altura){
 FUNCION ENTERO INICIO (ENTERO parametro1 , DECIMAL parametro2) {
 	DECIMAL y = 5.4;
 	ASIGNAR p.numero3 = p.numero4 + 1;
-	
+	AREA(3.0,4.0);
+	p.print(2);
 	RETORNAR 0;
 
 }
