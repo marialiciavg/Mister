@@ -1225,14 +1225,14 @@ class misterParser ( Parser ):
     def crearCuadruploDecision2(self):
         salida = self.pSaltos.pop()
         cont = len(self.quadList)
-        self.quadList[salida][3] = str(cont)
+        self.quadList[salida][3] = cont
 
     def crearCuadruploDecision3(self):
         falso = self.pSaltos.pop()
         self.quadList.append(['goto',None,None,None])
         cont = len(self.quadList)
         self.pSaltos.append(cont-1)
-        self.quadList[falso][3] = str(cont)
+        self.quadList[falso][3] = cont
 
     def crearCuadruploCiclo1(self):
         cont = len(self.quadList)
@@ -1241,9 +1241,9 @@ class misterParser ( Parser ):
     def crearCuadruploCiclo3(self):
         falso = self.pSaltos.pop()
         retorno = self.pSaltos.pop()
-        self.quadList.append(['goto',None,None,str(retorno)])
+        self.quadList.append(['goto',None,None,retorno])
         cont = len(self.quadList)
-        self.quadList[falso][3] = str(cont)
+        self.quadList[falso][3] = cont
 
     def crearCuadruploEra(self, nombreFuncion):
         tamAux = self.obtenerTamanioFuncion(nombreFuncion)
@@ -2500,7 +2500,7 @@ class misterParser ( Parser ):
                 self.tipoOperando = 'ENTERO'
                 self.operando = self.getCurrentToken().text
                 self.match(misterParser.CTENTERO)
-                self.insertarValorTipo([self.operando], self.tipoOperando)
+                self.insertarValorTipo([int(self.operando)], self.tipoOperando)
 
             elif token in [misterParser.CTEDECIMAL]:
                 self.enterOuterAlt(localctx, 2)
@@ -2508,7 +2508,7 @@ class misterParser ( Parser ):
                 self.tipoOperando = 'DECIMAL'
                 self.operando = self.getCurrentToken().text
                 self.match(misterParser.CTEDECIMAL)
-                self.insertarValorTipo([self.operando], self.tipoOperando)
+                self.insertarValorTipo([float(self.operando)], self.tipoOperando)
 
             elif token in [misterParser.ID]:
                 self.enterOuterAlt(localctx, 3)
@@ -2917,12 +2917,12 @@ class misterParser ( Parser ):
             self.state = 275
             self.funcAux1()
             self.state = 276
-            self.asignarTamanioFuncion()
             self.funcAux2()
             self.state = 277
             self.funcAux3()
             self.state = 278
             self.match(misterParser.LLAVE2)
+            self.asignarTamanioFuncion()
             self.crearCuadruploTerminarProc()
             self.funcionActual = None
         except RecognitionException as re:
@@ -4885,7 +4885,8 @@ class misterParser ( Parser ):
             idTempLectura = self.getCurrentToken().text
             self.match(misterParser.ID)
             self.checarId(idTempLectura)
-            self.crearCuadruploLectura(idTempLectura)
+            leerDirAux = self.obtenerDireccionVariable(idTempLectura)
+            self.crearCuadruploLectura(leerDirAux)
             self.state = 460
             self.match(misterParser.PARENTESIS2)
             self.state = 461

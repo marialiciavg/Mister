@@ -1,24 +1,26 @@
-CLASE PERSONA {
-	ATRIBUTOS:
-		PUBLICO ENTERO numero3;
-		PRIVADO DECIMAL numero4;
-		PUBLICO LISTA ENTERO 3 jeje;
-	METODOS:
-		FUNCION NADA print(ENTERO asdalsd){
-			TEXTO hola;
-			ASIGNAR hola = "hola";
-		}
-};
 
-FUNCION DECIMAL AREA( DECIMAL base, DECIMAL altura){
-	RETORNAR 4.5;
-}
-
-FUNCION DECIMAL AREA2( DECIMAL base, DECIMAL altura){
-	RETORNAR 0.43;
-}
 
 FUNCION ENTERO INICIO (ENTERO parametro1 , DECIMAL parametro2) {
+
+	ENTERO num1 = 5;
+	ENTERO num2 = 4;
+	ASIGNAR num1 = 1;
+	MIENTRAS (num1 < 10){
+		SI (num1 > 5){
+			ASIGNAR num1 = 20;	
+		}
+		SINO{
+			ASIGNAR num1 = num1 + 1;
+		}
+	}
+	IMPRIMIR(num1);
+	
+	SI("a" > "b") {
+		IMPRIMIR("a mayor que b");
+	} SINO {
+		IMPRIMIR("b mayor que a");
+	}
+	
 	RETORNAR 0;
 
 }
